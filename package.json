@@ -1,10 +1,11 @@
 {
-  "name": "CollectionTS",
+  "name": "collectionstypescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "collection of algorithm and data structure for typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "nodemon src/index.ts"
   },
   "repository": "git+https://github.com/always-maap/CollectionTS.git",
   "keywords": [],
