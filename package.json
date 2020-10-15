@@ -5,9 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "test": "jest --watchAll --no-cache"
   },
   "repository": "git+https://github.com/always-maap/CollectionTS.git",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
   "keywords": [],
   "author": "tur1ng <mohammadali.ap.2000@gmail.com>",
   "license": "ISC",
