@@ -1,1 +1,1 @@
-# CollectionTS
+# CollectionsTypescript
