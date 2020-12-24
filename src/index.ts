@@ -6,3 +6,4 @@ export * from './BinarySearchTree';
 export * from './BreadthFirstSearch';
 export * from './DepthFirstSearch';
 export * from './LinearSearch';
+export * from './BinarySearch';

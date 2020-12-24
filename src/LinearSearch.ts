@@ -1,12 +1,12 @@
 /**
  * O(n) time
  * @param arr
- * @param val
+ * @param target
  * @constructor
  */
-export const LinearSearch = <T>(arr: Array<T>, val: T) => {
+export const linearSearch = <T>(arr: Array<T>, target: T) => {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === val) return i;
+    if (arr[i] === target) return i;
   }
   return -1;
 };
