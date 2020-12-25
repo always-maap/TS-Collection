@@ -7,3 +7,4 @@ export * from './BreadthFirstSearch';
 export * from './DepthFirstSearch';
 export * from './LinearSearch';
 export * from './BinarySearch';
+export * from './NaiveSearch';

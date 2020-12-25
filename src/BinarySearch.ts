@@ -1,3 +1,8 @@
+/**
+ * O(log n) time
+ * @param arr
+ * @param target
+ */
 export const binarySearch = <T>(arr: Array<T>, target: T) => {
   let start = 0,
     end = arr.length - 1,
