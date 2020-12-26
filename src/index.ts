@@ -8,3 +8,4 @@ export * from './DepthFirstSearch';
 export * from './LinearSearch';
 export * from './BinarySearch';
 export * from './NaiveSearch';
+export * from './BubbleSort';
