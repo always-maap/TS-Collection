@@ -9,3 +9,4 @@ export * from './LinearSearch';
 export * from './BinarySearch';
 export * from './NaiveSearch';
 export * from './BubbleSort';
+export * from './InsertionSort';
