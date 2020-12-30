@@ -1,6 +1,6 @@
 {
   "name": "collectionstypescript",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "collection of algorithm and data structure for typescript",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
-  "keywords": [],
+  "keywords": ["typescript", "algorithm", "data structure", "collections-typescript"],
   "author": "tur1ng <mohammadali.ap.2000@gmail.com>",
   "license": "ISC",
   "bugs": {
