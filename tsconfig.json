@@ -9,12 +9,15 @@
       "esnext.asynciterable"
     ],
     "sourceMap": true,
+    "strict": true,
     "outDir": "./dist",
     "moduleResolution": "node",
     "removeComments": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
+    "declaration": true,
+    "declarationMap": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -24,14 +27,12 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "baseUrl": "."
+    "resolveJsonModule": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules", "./src/__test__/*"
   ],
   "include": [
-    "./src/**/*.tsx",
     "./src/**/*.ts"
   ]
 }

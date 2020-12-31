@@ -23,7 +23,7 @@ const mergeArray = (arr1: Array<number>, arr2: Array<number>) => {
 };
 
 /**
- * O(n log n)
+ * O(n log n) time
  * @param arr
  */
 export const mergeSort = (arr: Array<number>): Array<number> => {
