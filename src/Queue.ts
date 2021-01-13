@@ -15,7 +15,7 @@ export interface Queue<T> {
   last: QueueNode<T> | null;
   size: number;
   enqueue(val: T): number;
-  dequeue(): T | null;
+  dequeue(): T | undefined;
 }
 
 export class Queue<T> implements Queue<T> {
@@ -37,14 +37,14 @@ export class Queue<T> implements Queue<T> {
     return ++this.size;
   }
 
-  dequeue(): T | null {
-    if (!this.first) return null;
+  dequeue(): T | undefined {
+    if (!this.first) return undefined;
     let nodeToBeRemove = this.first;
     if (this.first === this.last) {
       this.last = null;
     }
     this.first = this.first.next;
     this.size--;
-    return nodeToBeRemove.value;
+    return nodeToBeRemove.value!;
   }
 }
