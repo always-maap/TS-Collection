@@ -1,4 +1,4 @@
-import { Stack } from '../';
+import { Stack } from '../Stacks';
 
 it('add 1 node to stack return 1 which is size of stack', () => {
   const stack = new Stack<number>();
