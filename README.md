@@ -1,7 +1,6 @@
 # CollectionsTypescript
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![GitHub CI](https://github.com/always-maap/Collections-Typescript/actions/workflows/integrate.yaml/badge.svg)](https://github.com/always-maap/Collections-TypeScript/actions/workflows/integrate.yaml)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Contributors ✨
 

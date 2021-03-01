@@ -1,4 +1,4 @@
-name: validate
+name: CI
 on: [push, pull_request]
 jobs:
   test:
@@ -6,10 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - uses: codecov/codecov-action@v1
       - uses: borales/actions-yarn@v2.0.0
         with:
           node-version: 12
       - run: yarn
       - run: yarn test
       - run: yarn build
+      - uses: codecov/codecov-action@v1
