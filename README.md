@@ -1,5 +1,6 @@
 # CollectionsTypescript
 [![GitHub CI](https://github.com/always-maap/Collections-Typescript/actions/workflows/integrate.yaml/badge.svg)](https://github.com/always-maap/Collections-TypeScript/actions/workflows/integrate.yaml)
+[![codecov](https://codecov.io/gh/always-maap/Collections-TypeScript/branch/master/graph/badge.svg?token=5VYRTNQYG3)](https://codecov.io/gh/always-maap/Collections-TypeScript)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
 ## Contributors ✨
