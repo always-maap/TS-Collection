@@ -1,6 +1,6 @@
 import { Queue } from '../Queue';
 
-describe('basic functionality', () => {
+describe('Basic functionality', () => {
   it('enqueue one item to queue should return 1', () => {
     const queue = new Queue<number>();
     expect(queue.enqueue(1)).toBe(1);
