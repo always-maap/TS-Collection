@@ -1,0 +1,7 @@
+.github
+.idea
+.husky
+.prettierrc
+src
+coverage
+tsconfig.json
