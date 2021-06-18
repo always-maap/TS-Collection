@@ -1,6 +1,6 @@
 {
-  "name": "collectionstypescript",
-  "version": "1.1.4",
+  "name": "@ts-collection/core",
+  "version": "0.0.1",
   "description": "collection of algorithm and data structure for typescript",
   "main": "dist/index.js",
   "types": "dist",
@@ -10,7 +10,7 @@
     "test": "jest",
     "prepare": "husky install"
   },
-  "repository": "git+https://github.com/always-maap/CollectionTS.git",
+  "repository": "git+https://github.com/always-maap/TS-Collection.git",
   "keywords": [
     "typescript",
     "algorithm",
@@ -20,9 +20,9 @@
   "author": "tur1ng <mohammadali.ap.2000@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/always-maap/CollectionTS/issues"
+    "url": "https://github.com/always-maap/TS-Collection/issues"
   },
-  "homepage": "https://github.com/always-maap/CollectionTS#readme",
+  "homepage": "https://github.com/always-maap/TS-Collection#readme",
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/preset-env": "^7.13.8",

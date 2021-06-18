@@ -1,5 +1,5 @@
 {
-  "projectName": "Collections-TypeScript",
+  "projectName": "TS-Collection",
   "projectOwner": "always-maap",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -9,6 +9,7 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "none",
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-blue.svg?style=flat)](#contributors)",
   "contributors": [
     {
       "login": "always-maap",
