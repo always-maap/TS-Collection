@@ -65,7 +65,7 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
 
   shift() {
     if (!this.head) return undefined;
-    let currentHead = this.head.next;
+    const currentHead = this.head.next;
     this.head = this.head.next;
     this.length--;
     if (this.length === 0) {

@@ -7,8 +7,8 @@ export interface IBreadthFirstSearch<T> {
 
 export class BreadthFirstSearch<T> extends BinarySearchTree<T> implements IBreadthFirstSearch<T> {
   traverse() {
-    let node: BSTNode<T> | null = this.root,
-      data: Array<T> = [],
+    let node: BSTNode<T> | null = this.root;
+    const data: Array<T> = [],
       queue = new Queue<BSTNode<T> | null>();
     queue.enqueue(node);
     while (queue.size) {

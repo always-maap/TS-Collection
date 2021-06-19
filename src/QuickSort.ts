@@ -1,4 +1,4 @@
-const pivot = (arr: Array<Number>, start = 0, end = arr.length - 1) => {
+const pivot = (arr: Array<number>, start = 0, end = arr.length - 1) => {
   const pivot = arr[start];
   let swapIndex = start;
   for (let i = start + 1; i <= end; i++) {

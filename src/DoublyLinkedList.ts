@@ -26,7 +26,7 @@ export interface IDoublyLinkedList<T> {
 export class DoublyLinkedList<T> implements IDoublyLinkedList<T> {
   private _head: LinkedListNode<T> | null = null;
   private _tail: LinkedListNode<T> | null = null;
-  private length: number = 0;
+  private length = 0;
 
   push(val: T) {
     const newNode = new LinkedListNode(val);

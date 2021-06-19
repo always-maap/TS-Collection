@@ -39,7 +39,7 @@ export class Queue<T> implements Queue<T> {
 
   dequeue(): T | undefined {
     if (!this.first) return undefined;
-    let nodeToBeRemove = this.first;
+    const nodeToBeRemove = this.first;
     if (this.first === this.last) {
       this.last = null;
     }
