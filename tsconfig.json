@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
     "lib": [
-      "es6",
-      "es2017",
       "esnext"
     ],
     "sourceMap": true,
@@ -29,7 +26,8 @@
     "resolveJsonModule": true
   },
   "exclude": [
-    "node_modules", "./src/__test__/*"
+    "node_modules",
+    "./src/__test__/*"
   ],
   "include": [
     "./src/**/*.ts"
