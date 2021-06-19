@@ -1,6 +1,6 @@
 {
   "name": "@ts-collection/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "collection of algorithm and data structure for typescript",
   "main": "dist/cjs/bundle.cjs.js",
   "module": "dist/esm/bundle.esm.js",

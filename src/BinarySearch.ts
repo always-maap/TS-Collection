@@ -1,7 +1,7 @@
 /**
- * O(log n) time
- * @param arr
- * @param target
+ * time complexity: O(log n) - space complexity: O(1)
+ *
+ * Binary Search only works with sorted array.
  */
 export const binarySearch = <T>(arr: Array<T>, target: T) => {
   let start = 0,
