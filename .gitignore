@@ -6,6 +6,7 @@ node_modules
 dist
 
 /coverage
+stats.html
 
 npm-debug.log*
 yarn-debug.log*
