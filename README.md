@@ -1,13 +1,15 @@
-<div style="display: flex; align-items: flex-end; width: 10rem;height: 10rem; border: 10px solid #3075C1; padding: 1rem;">
-    <span style="font-size: 3.5rem; font-weight: 700; font-family: sans-serif;">TS Collection</span>
+<div align="center">
+  <a href="https://github.com/always-maap/TS-Collection">
+    <img width="150px;" src="https://raw.githubusercontent.com/always-maap/TS-Collection/master/logo.png" alt="ts-collection logo" />
+  </a>
 </div>
 
 # TS-Collection
 
 [![npm version](https://img.shields.io/npm/v/@ts-collection/core?color=blue)](https://github.com/always-maap/Collections-TypeScript/actions/workflows/integrate.yaml)
 [![GitHub CI](https://github.com/always-maap/Collections-Typescript/actions/workflows/integrate.yaml/badge.svg)](https://github.com/always-maap/Collections-TypeScript/actions/workflows/integrate.yaml)
-[![codecov](https://codecov.io/gh/always-maap/Collections-TypeScript/branch/master/graph/badge.svg?token=5VYRTNQYG3)](https://codecov.io/gh/always-maap/Collections-TypeScript)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=flat)](#contributors-)
+[![codecov](https://codecov.io/gh/always-maap/Collections-TypeScript/branch/master/graph/badge.svg?token=5VYRTNQYG3)](https://codecov.io/gh/always-maap/Collections-TypeScript)
 
 ## Contributors ✨
 
