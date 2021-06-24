@@ -1,4 +1,9 @@
+<div style="display: flex; align-items: flex-end; width: 10rem;height: 10rem; border: 10px solid #3075C1; padding: 1rem;">
+    <span style="font-size: 3.5rem; font-weight: 700; font-family: sans-serif;">TS Collection</span>
+</div>
+
 # TS-Collection
+
 [![npm version](https://img.shields.io/npm/v/@ts-collection/core?color=blue)](https://github.com/always-maap/Collections-TypeScript/actions/workflows/integrate.yaml)
 [![GitHub CI](https://github.com/always-maap/Collections-Typescript/actions/workflows/integrate.yaml/badge.svg)](https://github.com/always-maap/Collections-TypeScript/actions/workflows/integrate.yaml)
 [![codecov](https://codecov.io/gh/always-maap/Collections-TypeScript/branch/master/graph/badge.svg?token=5VYRTNQYG3)](https://codecov.io/gh/always-maap/Collections-TypeScript)
@@ -22,4 +27,5 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
+Contributions of any kind welcome!
