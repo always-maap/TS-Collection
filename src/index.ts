@@ -14,4 +14,5 @@ export { linearSearch } from './LinearSearch';
 export { mergeSort } from './MergeSort';
 export { naiveSearch } from './NaiveSearch';
 export { quickSort } from './QuickSort';
+export { radixSort } from './RadixSort';
 export { selectionSort } from './SelectionSort';
