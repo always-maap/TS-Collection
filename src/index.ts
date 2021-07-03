@@ -2,6 +2,7 @@ export { BinarySearchTree } from './BinarySearchTree';
 export { BreadthFirstSearch } from './BreadthFirstSearch';
 export { DepthFirstSearch } from './DepthFirstSearch';
 export { DoublyLinkedList } from './DoublyLinkedList';
+export { Graph } from './Graph';
 export { MaxBinaryHeap } from './MaxBinaryHeap';
 export { PriorityQueue } from './PriorityQueue';
 export { Queue } from './Queue';
