@@ -9,7 +9,8 @@ interface IGraph {
   removeVertex(vertex: NodeType): void;
   addEdge(vertex1: NodeType, vertex2: NodeType): void;
   removeEdge(vertex1: NodeType, vertex2: NodeType): void;
-  depthFirstSearch(start: NodeType): NodeType[];
+  depthFirstSearchRecursive(start: NodeType): NodeType[];
+  depthFirstSearchIterative(start: NodeType): NodeType[];
   breadthFirstSearch(start: NodeType): NodeType[];
 }
 
@@ -38,7 +39,7 @@ export class Graph implements IGraph {
     this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter((vertex) => vertex !== vertex1);
   }
 
-  depthFirstSearch(start: NodeType) {
+  depthFirstSearchRecursive(start: NodeType) {
     const result: NodeType[] = [];
     const visited: { [key in NodeType]: boolean } = {};
 
@@ -56,8 +57,7 @@ export class Graph implements IGraph {
     return result;
   }
 
-  // iterative dfs, read-only
-  private depthFirstSearchIterative(start: NodeType) {
+  depthFirstSearchIterative(start: NodeType) {
     const result: NodeType[] = [];
     const visited: { [key in NodeType]: boolean } = {};
 
