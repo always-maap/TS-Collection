@@ -1,3 +1,5 @@
+import { Stack } from './Stacks';
+
 type NodeType = string | number;
 
 interface IGraph {
@@ -38,19 +40,38 @@ export class Graph implements IGraph {
     const result: NodeType[] = [];
     const visited: { [key in NodeType]: boolean } = {};
 
-    const bfs = (vertex: NodeType): NodeType | null => {
-      if (!vertex) return null;
-      visited[vertex] = true;
-      result.push(vertex);
-      this.adjacencyList[vertex].forEach((neighbor) => {
-        if (!visited[neighbor]) {
-          return bfs(neighbor);
-        }
-        return null;
-      });
-      return null;
+    const dfsRecursive = (vertex: NodeType) => {
+      if (!visited[vertex]) {
+        visited[vertex] = true;
+        result.push(vertex);
+        this.adjacencyList[vertex].forEach((neighbor) => {
+          dfsRecursive(neighbor);
+        });
+      }
     };
-    bfs(start);
+    dfsRecursive(start);
+
+    return result;
+  }
+
+  // alternative iterative dfs
+  private depthFirstSearchIterative(start: NodeType) {
+    const result: NodeType[] = [];
+    const visited: { [key in NodeType]: boolean } = {};
+
+    const stack = new Stack<NodeType>();
+    stack.push(start);
+
+    while (stack.size) {
+      const vertex = stack.pop()!;
+      if (!visited[vertex]) {
+        visited[vertex] = true;
+        result.push(vertex);
+        this.adjacencyList[vertex].forEach((neighbor) => {
+          stack.push(neighbor);
+        });
+      }
+    }
 
     return result;
   }
