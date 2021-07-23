@@ -1,3 +1,4 @@
+import { Queue } from './Queue';
 import { Stack } from './Stacks';
 
 type NodeType = string | number;
@@ -9,6 +10,7 @@ interface IGraph {
   addEdge(vertex1: NodeType, vertex2: NodeType): void;
   removeEdge(vertex1: NodeType, vertex2: NodeType): void;
   depthFirstSearch(start: NodeType): NodeType[];
+  breadthFirstSearch(start: NodeType): NodeType[];
 }
 
 export class Graph implements IGraph {
@@ -54,7 +56,7 @@ export class Graph implements IGraph {
     return result;
   }
 
-  // alternative iterative dfs
+  // iterative dfs, read-only
   private depthFirstSearchIterative(start: NodeType) {
     const result: NodeType[] = [];
     const visited: { [key in NodeType]: boolean } = {};
@@ -69,6 +71,27 @@ export class Graph implements IGraph {
         result.push(vertex);
         this.adjacencyList[vertex].forEach((neighbor) => {
           stack.push(neighbor);
+        });
+      }
+    }
+
+    return result;
+  }
+
+  breadthFirstSearch(start: NodeType) {
+    const result: NodeType[] = [];
+    const visited: { [key in NodeType]: boolean } = {};
+
+    const queue = new Queue<NodeType>();
+    queue.enqueue(start);
+
+    while (queue.size) {
+      const vertex = queue.dequeue()!;
+      if (!visited[vertex]) {
+        visited[vertex] = true;
+        result.push(vertex);
+        this.adjacencyList[vertex].forEach((neighbor) => {
+          queue.enqueue(neighbor);
         });
       }
     }
