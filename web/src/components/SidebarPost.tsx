@@ -1,6 +1,6 @@
+import cn from 'classnames';
 import * as React from 'react';
 import { SidebarNavLink } from './SidebarNavLink';
-import cn from 'classnames';
 
 export const SidebarPost: React.FC<{
   isMobile?: boolean;

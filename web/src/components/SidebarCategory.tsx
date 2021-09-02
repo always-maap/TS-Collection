@@ -1,15 +1,8 @@
-import { useRef, useState, useEffect } from 'react';
 import cn from 'classnames';
+import { useRef, useState, useEffect } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 
-export function SidebarCategory({
-  isMobile,
-  level = 1,
-  title,
-  selected,
-  opened,
-  children,
-}: any) {
+export function SidebarCategory({ isMobile, level = 1, title, selected, opened, children }: any) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [{ toggle, shouldScroll = false }, setToggle] = useState<{
     toggle: boolean;
@@ -32,13 +25,10 @@ export function SidebarCategory({
   // Navigate to the start of the category when manually opened
   useEffect(() => {
     if (toggle && shouldScroll && ref.current != null) {
-      const content = document.querySelector(
-        isMobile ? '.docs-dropdown' : '.sidebar-content'
-      );
+      const content = document.querySelector(isMobile ? '.docs-dropdown' : '.sidebar-content');
       if (content) {
         // 10 is added for better margin
-        const height =
-          ref.current.offsetTop - (isMobile ? 10 : (content as any).offsetTop);
+        const height = ref.current.offsetTop - (isMobile ? 10 : (content as any).offsetTop);
 
         content.scrollTop = height;
         setToggle({ toggle });
@@ -47,10 +37,7 @@ export function SidebarCategory({
   }, [toggle, shouldScroll, isMobile]);
 
   return (
-    <div
-      ref={ref}
-      className={cn('category', levelClass, { open: toggle, selected })}
-    >
+    <div ref={ref} className={cn('category', levelClass, { open: toggle, selected })}>
       <a className="label" onClick={toggleCategory}>
         {title}
         <FiChevronDown className="text-gray-600" />

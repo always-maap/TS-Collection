@@ -1,5 +1,5 @@
-import path from 'path';
 import fetch from 'isomorphic-unfetch';
+import path from 'path';
 import { readFile, writeFile } from '../fs-utils';
 import { GITHUB_API_URL, REPO_NAME } from './constants';
 
@@ -18,9 +18,7 @@ export async function getLatestTag() {
   }
 
   if (!cachedTag) {
-    const res = await fetch(
-      `${GITHUB_API_URL}/repos/${REPO_NAME}/releases/latest`
-    );
+    const res = await fetch(`${GITHUB_API_URL}/repos/${REPO_NAME}/releases/latest`);
 
     if (res.ok) {
       const data = await res.json();

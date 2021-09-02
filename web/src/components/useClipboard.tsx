@@ -1,5 +1,6 @@
-import * as React from 'react';
 import copy from 'copy-to-clipboard';
+import * as React from 'react';
+import { useEffect } from 'react';
 
 /**
  * React hook to copy content to clipboard
@@ -15,8 +16,7 @@ export function useClipboard(text: string, timeout = 1500) {
     setHasCopied(didCopy);
   }, [text]);
 
-  // @ts-ignore
-  React.useEffect(() => {
+  useEffect(() => {
     if (hasCopied) {
       const id = setTimeout(() => {
         setHasCopied(false);

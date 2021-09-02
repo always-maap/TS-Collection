@@ -1,13 +1,11 @@
-import { resolve } from 'url';
-import visit from 'unist-util-visit';
-import toString from 'mdast-util-to-string';
 import GithubSlugger from 'github-slugger';
+import toString from 'mdast-util-to-string';
+import visit from 'unist-util-visit';
+import { resolve } from 'url';
 import { GITHUB_URL, REPO_NAME } from '../github/constants';
 
 const ABSOLUTE_URL = /^https?:\/\/|^\/\//i;
 const SITE_URL = /^(https?:\/\/|^\/\/)formik\.org/i;
-// The headers will be updated to include a link to their hash
-const HEADINGS = ['h2', 'h3', 'h4', 'h5', 'h6'];
 
 function removeExt(path) {
   const basePath = path.split(/#|\?/)[0];
@@ -26,12 +24,12 @@ function visitCard(node) {
   )
     return;
 
-  const anchor = node.children.find(n => n.tagName === 'a');
+  const anchor = node.children.find((n) => n.tagName === 'a');
 
   if (!anchor || !anchor.children) return;
 
-  const title = anchor.children.find(n => n.tagName === 'b');
-  const text = anchor.children.find(n => n.tagName === 'small');
+  const title = anchor.children.find((n) => n.tagName === 'b');
+  const text = anchor.children.find((n) => n.tagName === 'small');
 
   if (!title || !text) return;
 
@@ -66,11 +64,7 @@ export default function rehypeDocs({ filePath, tag }) {
       const isAbsoluteUrl = ABSOLUTE_URL.test(href);
       const isHash = href[0] === '#';
       const isRepoUrl = !isHash && !isDocs;
-      if (
-        props.className &&
-        props.className.includes &&
-        props.className.includes('anchor')
-      ) {
+      if (props.className && props.className.includes && props.className.includes('anchor')) {
         return;
       }
       if (isAbsoluteUrl || isRepoUrl) {
@@ -93,51 +87,16 @@ export default function rehypeDocs({ filePath, tag }) {
     // The URL is relative at this point
     props.className = 'relative-link';
     // Update the hash used by anchors to match the one set for headers
-    props.href = hash
-      ? `${relativePath}#${anchorSlugger.slug(hash)}`
-      : relativePath;
+    props.href = hash ? `${relativePath}#${anchorSlugger.slug(hash)}` : relativePath;
     // Relative URL for another documentation route
     if (isDocs) {
-      props.href = removeExt(
-        tag ? props.href.replace('/docs', `/docs/tag/${tag}`) : props.href
-      );
+      props.href = removeExt(tag ? props.href.replace('/docs', `/docs/tag/${tag}`) : props.href);
     }
   }
 
-  function visitHeading(node) {
-    const text = toString(node);
-
-    if (!text) return;
-
-    const id = slugger.slug(text);
-
-    node.properties.className = 'heading';
-    node.children = [
-      {
-        type: 'element',
-        tagName: 'span',
-        properties: { id },
-      },
-      {
-        type: 'element',
-        tagName: 'a',
-        properties: {
-          href: `#${id}`,
-        },
-        children: node.children,
-      },
-      {
-        type: 'element',
-        tagName: 'span',
-        properties: { className: 'permalink' },
-        children: [permalinkIcon],
-      },
-    ];
-  }
-
   return function transformer(tree) {
-    visit(tree, node => node.tagName === 'a', visitAnchor);
+    visit(tree, (node) => node.tagName === 'a', visitAnchor);
     // visit(tree, (node) => HEADINGS.includes(node.tagName), visitHeading);
-    visit(tree, node => node.tagName === 'div', visitCard);
+    visit(tree, (node) => node.tagName === 'div', visitCard);
   };
 }

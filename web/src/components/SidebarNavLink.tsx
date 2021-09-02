@@ -1,7 +1,7 @@
-import * as React from 'react';
+import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import cn from 'classnames';
+import * as React from 'react';
 
 export interface SidebarNavLinkProps {
   route: any;
@@ -11,10 +11,7 @@ export interface SidebarNavLinkProps {
   scrollSelectedIntoView?: boolean;
 }
 
-export function SidebarNavLink({
-  route: { href, pathname, title, selected },
-  onClick,
-}: SidebarNavLinkProps) {
+export function SidebarNavLink({ route: { href, pathname, title, selected } }: SidebarNavLinkProps) {
   const router = useRouter();
   const onlyHashChange = pathname === router.pathname;
 

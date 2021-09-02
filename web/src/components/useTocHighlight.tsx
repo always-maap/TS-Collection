@@ -16,9 +16,7 @@ export function useTocHighlight(
   getHeaderDataFromAnchor: (el: Element) => HeadingData,
   getAnchorHeaderIdentifier: (el: Element) => string | undefined
 ) {
-  const [lastActiveLink, setLastActiveLink] = React.useState<
-    Element | undefined
-  >(undefined);
+  const [lastActiveLink, setLastActiveLink] = React.useState<Element | undefined>(undefined);
   const [headings, setHeadings] = React.useState<HeadingData[]>([]);
 
   React.useEffect(() => {
@@ -60,9 +58,7 @@ export function useTocHighlight(
         while (index < links.length && !itemHighlighted) {
           const link = links[index];
           const { href } = link;
-          const anchorValue = decodeURIComponent(
-            href.substring(href.indexOf('#') + 1)
-          );
+          const anchorValue = decodeURIComponent(href.substring(href.indexOf('#') + 1));
 
           if (getAnchorHeaderIdentifier(activeHeaderAnchor) === anchorValue) {
             if (lastActiveLink) {

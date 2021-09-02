@@ -1,9 +1,8 @@
-import * as React from 'react';
 import cn from 'classnames';
+import * as React from 'react';
+import { FC } from 'react';
 
-export interface ContainerProps {}
-
-export const Container: React.FC<ContainerProps> = props => {
+export const Container: FC = (props) => {
   return <div className={cn('container mx-auto')} {...props} />;
 };
 

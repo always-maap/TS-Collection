@@ -1,7 +1,6 @@
-import { removeFromLast } from './utils';
 import { RouteItem } from '../types';
+import { removeFromLast } from './utils';
 
-// @ts-ignore
 export function findRouteByPath(path: string, routes: RouteItem[]): RouteItem {
   // eslint-disable-next-line
   for (const route of routes) {

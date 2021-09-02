@@ -13,9 +13,7 @@ type GHError = Error & { status?: Response['status']; headers?: any };
 
 async function getError(res: Response): Promise<GHError> {
   const errorText = await getErrorText(res);
-  const error: GHError = new Error(
-    `GitHub raw download error (${res.status}): ${errorText}`
-  );
+  const error: GHError = new Error(`GitHub raw download error (${res.status}): ${errorText}`);
 
   error.status = res.status;
   error.headers = (res.headers as any).raw();

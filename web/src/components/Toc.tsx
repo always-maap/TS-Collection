@@ -1,21 +1,15 @@
-import * as React from 'react';
 import cx from 'classnames';
-import { useTocHighlight } from './useTocHighlight';
-import { Post } from 'lib/types';
+import * as React from 'react';
+import { FC } from 'react';
 import styles from './Toc.module.css';
+import { useTocHighlight } from './useTocHighlight';
 
 const TOP_OFFSET = 100;
 
 function getHeaderAnchors(): Element[] {
-  return Array.prototype.filter.call(
-    document.getElementsByClassName('anchor'),
-    function (testElement) {
-      return (
-        testElement.parentNode.nodeName === 'H2' ||
-        testElement.parentNode.nodeName === 'H3'
-      );
-    }
-  );
+  return Array.prototype.filter.call(document.getElementsByClassName('anchor'), function (testElement) {
+    return testElement.parentNode.nodeName === 'H2' || testElement.parentNode.nodeName === 'H3';
+  });
 }
 function getHeaderDataFromAnchors(el: Element) {
   return {
@@ -25,14 +19,14 @@ function getHeaderDataFromAnchors(el: Element) {
   };
 }
 
-export const Toc: React.FC<{}> = () => {
+export const Toc: FC = () => {
   const headings = useTocHighlight(
     styles.contents__link,
     styles['contents__link--active'],
     TOP_OFFSET,
     getHeaderAnchors,
     getHeaderDataFromAnchors,
-    el => el?.parentElement?.id
+    (el) => el?.parentElement?.id
   );
   return (
     <ul className="space-y-3">

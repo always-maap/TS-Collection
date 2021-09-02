@@ -1,6 +1,5 @@
 module.exports = [
   require('remark-slug'),
-  require('./remark-paragraph-alerts'),
   [
     require('remark-autolink-headings'),
     {

@@ -1,6 +1,5 @@
-import * as React from 'react';
-
 import cn from 'classnames';
+import * as React from 'react';
 
 export interface StickyProps {
   offset?: number;
@@ -19,7 +18,7 @@ export const Sticky: React.FC<StickyProps> = ({ offset, children, shadow }) => {
           position: sticky;
         }
         div.shadow {
-          box-shadow: rgba(0, 0, 0, 0.06) 0px 6px 20px;
+          box-shadow: rgba(0, 0, 0, 0.06) 0 6px 20px;
         }
       `}</style>
     </div>

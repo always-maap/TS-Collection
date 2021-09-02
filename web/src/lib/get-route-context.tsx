@@ -1,4 +1,4 @@
-import { RouteItem, Routes } from './types';
+import { RouteItem } from './types';
 
 export interface RouteContext {
   parent?: RouteItem;
@@ -9,11 +9,7 @@ export interface RouteContext {
 /**
  * Returns the siblings of a specific route (that is the previous and next routes).
  */
-export function getRouteContext(
-  _route: RouteItem,
-  routes: RouteItem[],
-  ctx: RouteContext = {}
-) {
+export function getRouteContext(_route: RouteItem, routes: RouteItem[], ctx: RouteContext = {}) {
   if (!_route) {
     return ctx;
   }
@@ -35,24 +31,14 @@ export function getRouteContext(
     if (!route.path) continue;
 
     if (ctx.route) {
-      ctx.nextRoute =
-        parent && i === 0
-          ? {
-              ...route,
-              title: `${_route.title} | ${parent.title}`,
-            }
-          : route;
-
+      ctx.nextRoute = parent && i === 0 ? { ...route, title: `${_route.title} | ${parent.title}` } : route;
       return ctx;
     }
 
     if (route && route.path === path) {
       ctx.route = {
         ..._route,
-        title:
-          parent && !parent.heading
-            ? `${_route.title} | ${parent.title}`
-            : _route.title,
+        title: parent && !parent.heading ? `${_route.title} | ${parent.title}` : _route.title,
       };
       // Continue the loop until we know the next route
       continue;
@@ -60,10 +46,7 @@ export function getRouteContext(
 
     ctx.prevRoute =
       parent && !parent.heading && !routes[i + 1]?.path
-        ? {
-            ...route,
-            title: `${route.title} | ${parent.title}`,
-          }
+        ? { ...route, title: `${route.title} | ${parent.title}` }
         : route;
   }
 

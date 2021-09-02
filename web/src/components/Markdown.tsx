@@ -6,12 +6,7 @@ export interface Markdown {
 }
 
 export const Markdown: React.FC<Markdown> = ({ html: content }) => {
-  return (
-    <div
-      className={markdownStyles['markdown']}
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
-  );
+  return <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
 Markdown.displayName = 'PostBody';

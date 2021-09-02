@@ -6,22 +6,12 @@ function hasModifier(event: any) {
 /**
  * Util to add router events to anchors that weren't added with React Components
  */
-export default function addRouterEvents(
-  node: Node,
-  router: NextRouter,
-  { href }: { href: string }
-) {
+export default function addRouterEvents(node: Node, router: NextRouter, { href }: { href: string }) {
   function onClick(e: any) {
     const linkTarget = e.currentTarget.target;
-    if (
-      !(
-        e.defaultPrevented ||
-        hasModifier(e) ||
-        (linkTarget && linkTarget !== '_self')
-      )
-    ) {
+    if (!(e.defaultPrevented || hasModifier(e) || (linkTarget && linkTarget !== '_self'))) {
       e.preventDefault();
-      router.push(href).then(success => {
+      router.push(href).then((success) => {
         if (success) {
           window.scrollTo(0, 0);
           document.body.focus();

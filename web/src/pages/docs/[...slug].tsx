@@ -48,7 +48,6 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
   const { asPath, isFallback, query } = router;
   const isMobile = useIsMobile();
 
-  // @ts-ignore
   const { route, prevRoute, nextRoute } = getRouteContext(_route, routes);
   const title = route && `${page.title || route.title} | Formik`;
   const { tag } = getSlug(query as { slug: string[] });

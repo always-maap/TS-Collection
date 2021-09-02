@@ -1,5 +1,5 @@
-import * as React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import * as React from 'react';
 
 // Original: https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css
 
@@ -9,7 +9,7 @@ const theme /*: PrismTheme */ = {
   plain: {
     color: '#293742',
     borderRadius: 12,
-    fontFamily: `SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace`,
+    fontFamily: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace',
     fontSize: 14,
     lineHeight: '1.5',
   },
@@ -83,21 +83,11 @@ const theme /*: PrismTheme */ = {
   ],
 };
 
-const Code = ({
-  children,
-  codeString,
-  className = 'language-js',
-  ...props
-}: any) => {
+const Code = ({ children, className = 'language-js' }: any) => {
   const language = className.replace(/language-/, '');
 
   return (
-    <Highlight
-      {...defaultProps}
-      code={children.trim()}
-      language={language}
-      theme={theme as any}
-    >
+    <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme as any}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={className + ' bg-gray-50 pb-4 pt-4 pr-4 overflow-scroll'}

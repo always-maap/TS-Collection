@@ -1,5 +1,5 @@
-import * as React from 'react';
 import dynamic from 'next/dynamic';
+import * as React from 'react';
 
 export default {
   // default tags
