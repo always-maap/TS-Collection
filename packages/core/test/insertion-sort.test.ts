@@ -1,4 +1,4 @@
-import { insertionSort } from '../InsertionSort';
+import { insertionSort } from '../src';
 
 describe('Basic functionality', () => {
   it('sort the unsorted arr', () => {

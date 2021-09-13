@@ -1,4 +1,4 @@
-import { MaxBinaryHeap } from '../MaxBinaryHeap';
+import { MaxBinaryHeap } from '../src';
 
 describe('Basic functionality', () => {
   it('insertion heap', () => {

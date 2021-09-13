@@ -1,4 +1,4 @@
-import { binarySearch } from '../BinarySearch';
+import { binarySearch } from '../src';
 
 describe('Basic functionality', () => {
   it('search at the beginning of the array', () => {

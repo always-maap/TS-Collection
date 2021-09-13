@@ -1,4 +1,4 @@
-import { Queue } from '../Queue';
+import { Queue } from '../src';
 
 describe('Basic functionality', () => {
   it('enqueue one item to queue should return 1', () => {

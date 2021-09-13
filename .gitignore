@@ -2,10 +2,11 @@
 .vscode
 
 node_modules
+/packages/*/node_modules
 .DS_Store
-dist
+/packages/*/dist
 
-/coverage
+/packages/*/coverage
 stats.html
 
 npm-debug.log*

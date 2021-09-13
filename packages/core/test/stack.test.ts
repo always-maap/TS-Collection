@@ -1,4 +1,4 @@
-import { Stack } from '../Stacks';
+import { Stack } from '../src';
 
 describe('Basic functionality', () => {
   it('add 1 node to stack return 1 which is size of stack', () => {
