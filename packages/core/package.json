@@ -7,7 +7,8 @@
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "clean": "rimraf dist",
+    "build-clean": "yarn clean && yarn build",
     "build:types": "tsc --emitDeclarationOnly",
     "build:bundle": "rollup -c",
     "build": "npm run build:types && npm run build:bundle",

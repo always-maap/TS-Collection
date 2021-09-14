@@ -2,7 +2,9 @@
   "name": "ts-collection-project",
   "private": true,
   "scripts": {
+    "clean": "lerna run clean",
     "dev": "lerna run dev",
+    "build": "lerna run build",
     "lint": "lerna run lint",
     "test": "lerna run test"
   },
