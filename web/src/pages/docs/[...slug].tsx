@@ -1,6 +1,4 @@
-import { Banner } from 'components/Banner';
 import { DocsPageFooter } from 'components/DocsPageFooter';
-import Footer from 'components/Footer';
 import MDXComponents from 'components/MDXComponents';
 import { Seo } from 'components/Seo';
 import { Sidebar } from 'components/Sidebar';
@@ -8,12 +6,10 @@ import { SidebarCategory } from 'components/SidebarCategory';
 import { SidebarHeading } from 'components/SidebarHeading';
 import { SidebarMobile } from 'components/SidebarMobile';
 import { SidebarPost } from 'components/SidebarPost';
-import { Sticky } from 'components/Sticky';
+import Sticky from 'components/Sticky';
 import { Toc } from 'components/Toc';
 import addRouterEvents from 'components/addRouterEvents';
-import { Nav } from 'components/layout/Nav';
 import s from 'components/markdown.module.css';
-import { useIsMobile } from 'components/useIsMobile';
 import matter from 'gray-matter';
 import { findRouteByPath } from 'lib/docs/findRouteByPath';
 import {
@@ -35,7 +31,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import * as React from 'react';
+import { useEffect } from 'react';
 
 interface DocsProps {
   page: Page;
@@ -46,7 +42,6 @@ interface DocsProps {
 export default function Docs({ page, routes, route: _route }: DocsProps) {
   const router = useRouter();
   const { asPath, isFallback, query } = router;
-  const isMobile = useIsMobile();
 
   const { route, prevRoute, nextRoute } = getRouteContext(_route, routes);
   const title = route && `${page.title || route.title} | Formik`;
@@ -54,7 +49,7 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
 
   // This effect adds `next/link`-like behavior to any non-hash relative link
   // @source @timer
-  React.useEffect(() => {
+  useEffect(() => {
     const listeners: any[] = [];
     document.querySelectorAll('.docs .relative-link').forEach((node) => {
       const href = node.getAttribute('href');
@@ -87,14 +82,6 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
         </Head>
       )}
       <div>
-        <Banner />
-        {isMobile ? (
-          <Nav />
-        ) : (
-          <Sticky>
-            <Nav />
-          </Sticky>
-        )}
         {route ? (
           <>
             <Seo title={title || page.title} description={page.description} />
@@ -144,7 +131,6 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
           <div>loading....</div>
         )}
       </div>
-      <Footer />
       <style jsx>{`
         .docs {
           min-width: calc(100% - 300px - 1rem - 200px);
@@ -213,9 +199,6 @@ function SidebarRoutes({
 export const getStaticProps: GetStaticProps<any, { slug: string[] }> = async ({ params }) => {
   const { tag, slug } = getSlug(params ?? { slug: [] });
   const currentTag = await getCurrentTag(tag);
-  // console.log('tag', tag);
-  // console.log('slug', slug);
-  // console.log('product', product);
 
   let manifest;
   if (tag) {

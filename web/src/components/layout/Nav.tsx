@@ -67,3 +67,5 @@ export const Nav: FC = () => (
     </div>
   </div>
 );
+
+export default Nav;

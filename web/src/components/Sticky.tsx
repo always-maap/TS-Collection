@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import * as React from 'react';
+import { FC } from 'react';
 
 export interface StickyProps {
   offset?: number;
@@ -7,7 +7,7 @@ export interface StickyProps {
   className?: string;
 }
 
-export const Sticky: React.FC<StickyProps> = ({ offset, children, shadow }) => {
+export const Sticky: FC<StickyProps> = ({ offset, children, shadow }) => {
   return (
     <div style={{ top: offset || 0 }} className={cn({ shadow }, 'z-10')}>
       {children}
@@ -25,4 +25,4 @@ export const Sticky: React.FC<StickyProps> = ({ offset, children, shadow }) => {
   );
 };
 
-Sticky.displayName = 'Sticky';
+export default Sticky;

@@ -1,8 +1,4 @@
-import { Banner } from 'components/Banner';
-import Footer from 'components/Footer';
 import { Seo } from 'components/Seo';
-import { Sticky } from 'components/Sticky';
-import { Nav } from 'components/layout/Nav';
 import { REPO_URL } from 'constants/link';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,10 +14,6 @@ const Home: FC = () => {
         description="An Efficient, Zero Dependency, and Tested library for Algorithms and Data Structures."
       />
       <div className="bg-gray-50 h-full min-h-full">
-        <Banner />
-        <Sticky>
-          <Nav />
-        </Sticky>
         <div className="relative bg-white overflow-hidden">
           <div className="hidden lg:block lg:absolute lg:inset-0">
             <svg
@@ -190,7 +182,6 @@ const Home: FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
