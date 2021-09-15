@@ -1,24 +1,28 @@
 import cn from 'classnames';
-import * as React from 'react';
-import { SidebarNavLink } from './SidebarNavLink';
+import { FC, useRef, useEffect } from 'react';
+import SidebarNavLink from './SidebarNavLink';
 
-export const SidebarPost: React.FC<{
+type Props = {
   isMobile?: boolean;
   level: number;
   route: {
     selected: boolean;
     href: string;
-    path: string | undefined;
+    path?: string;
     title: string;
     pathname: string;
   };
   onClick?: () => void;
   categorySelected?: string;
   scrollSelectedIntoView?: boolean;
-}> = ({ isMobile, route, level = 1, onClick, ...props }) => {
-  const selectedRef = React.useRef<HTMLDivElement>(null);
+};
+
+const SidebarPost: FC<Props> = (props) => {
+  const { isMobile, route, level = 1, onClick } = props;
+  const selectedRef = useRef<HTMLDivElement>(null);
   const ref = route.selected ? selectedRef : null;
-  React.useEffect(() => {
+
+  useEffect(() => {
     if (ref && ref.current && !isMobile) {
       const content = document.querySelector('.sidebar-content');
       // 32 is the top and bottom margin for `.link`
@@ -28,6 +32,7 @@ export const SidebarPost: React.FC<{
       }
     }
   }, [ref, isMobile]);
+
   return (
     <div ref={ref} className={cn('link', `level-${level}`)}>
       <SidebarNavLink
@@ -59,3 +64,5 @@ export const SidebarPost: React.FC<{
     </div>
   );
 };
+
+export default SidebarPost;

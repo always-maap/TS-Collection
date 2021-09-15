@@ -6,7 +6,7 @@ type Props = {
   fixed?: boolean;
 };
 
-export const Sidebar: FC<Props> = (props) => {
+const Sidebar: FC<Props> = (props) => {
   const { active, fixed, children } = props;
 
   return (
@@ -45,3 +45,5 @@ export const Sidebar: FC<Props> = (props) => {
     </aside>
   );
 };
+
+export default Sidebar;

@@ -1,8 +1,18 @@
 import cn from 'classnames';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, FC } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 
-export function SidebarCategory({ isMobile, level = 1, title, selected, opened, children }: any) {
+type Props = {
+  isMobile: boolean;
+  level: number;
+  title: string;
+  selected: boolean;
+  opened: boolean;
+};
+
+const SidebarCategory: FC<Props> = (props) => {
+  const { isMobile, level = 1, title, selected, opened, children } = props;
+
   const ref = useRef<HTMLDivElement | null>(null);
   const [{ toggle, shouldScroll = false }, setToggle] = useState<{
     toggle: boolean;
@@ -110,4 +120,6 @@ export function SidebarCategory({ isMobile, level = 1, title, selected, opened, 
       `}</style>
     </div>
   );
-}
+};
+
+export default SidebarCategory;

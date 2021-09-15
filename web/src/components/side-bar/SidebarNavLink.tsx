@@ -2,16 +2,21 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import { FC } from 'react';
 
-export interface SidebarNavLinkProps {
+type Props = {
   route: any;
   level: number;
   onClick?: () => void;
   categorySelected?: string;
   scrollSelectedIntoView?: boolean;
-}
+};
 
-export function SidebarNavLink({ route: { href, pathname, title, selected } }: SidebarNavLinkProps) {
+const SidebarNavLink: FC<Props> = (props) => {
+  const {
+    route: { href, pathname, title, selected },
+  } = props;
+
   const router = useRouter();
   const onlyHashChange = pathname === router.pathname;
 
@@ -73,6 +78,6 @@ export function SidebarNavLink({ route: { href, pathname, title, selected } }: S
       `}</style>
     </div>
   );
-}
+};
 
-SidebarNavLink.displayName = 'SidebarNavLink';
+export default SidebarNavLink;

@@ -1,26 +1,31 @@
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import cn from 'classnames';
+import { Container } from 'components/Container';
 import { useRouter } from 'next/router';
-import * as React from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { FiChevronRight as ArrowRightSidebar } from 'react-icons/fi';
-import { Container } from './Container';
 
-export function SidebarMobile({ children }: { children: React.ReactNode }) {
-  const [opened, setOpen] = React.useState(false);
-  const menuRef = React.useRef<HTMLDivElement>(null);
+const SidebarMobile: FC = (props) => {
+  const { children } = props;
+
+  const [opened, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
   const openMenu = () => {
     if (menuRef.current != null) {
       disableBodyScroll(menuRef.current);
       setOpen(true);
     }
   };
+
   const closeMenu = () => {
     if (menuRef.current != null) {
       enableBodyScroll(menuRef.current);
       setOpen(false);
     }
   };
+
   const toggleOpen = () => {
     if (opened) {
       closeMenu();
@@ -33,7 +38,7 @@ export function SidebarMobile({ children }: { children: React.ReactNode }) {
     closeMenu();
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     onRouteChange();
     return () => {
       clearAllBodyScrollLocks();
@@ -107,4 +112,6 @@ export function SidebarMobile({ children }: { children: React.ReactNode }) {
       </Container>
     </div>
   );
-}
+};
+
+export default SidebarMobile;

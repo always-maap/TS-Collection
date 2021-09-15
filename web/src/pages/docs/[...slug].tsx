@@ -1,15 +1,13 @@
 import { DocsPageFooter } from 'components/DocsPageFooter';
 import MDXComponents from 'components/MDXComponents';
 import { Seo } from 'components/Seo';
-import { Sidebar } from 'components/Sidebar';
-import { SidebarCategory } from 'components/SidebarCategory';
-import { SidebarHeading } from 'components/SidebarHeading';
-import { SidebarMobile } from 'components/SidebarMobile';
-import { SidebarPost } from 'components/SidebarPost';
 import Sticky from 'components/Sticky';
 import { Toc } from 'components/Toc';
 import addRouterEvents from 'components/addRouterEvents';
 import s from 'components/markdown.module.css';
+import Sidebar from 'components/side-bar/Sidebar';
+import SidebarMobile from 'components/side-bar/SidebarMobile';
+import SidebarRoutes from 'components/side-bar/SidebarRoutes';
 import matter from 'gray-matter';
 import { findRouteByPath } from 'lib/docs/findRouteByPath';
 import {
@@ -21,7 +19,7 @@ import {
 } from 'lib/docs/page';
 import rehypeDocs from 'lib/docs/rehype-docs';
 import remarkPlugins from 'lib/docs/remark-plugins';
-import { addTagToSlug, getSlug, removeFromLast } from 'lib/docs/utils';
+import { getSlug } from 'lib/docs/utils';
 import { getRouteContext } from 'lib/get-route-context';
 import { getRawFileFromRepo } from 'lib/github/raw';
 import { RouteItem, Page } from 'lib/types';
@@ -44,7 +42,7 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
   const { asPath, isFallback, query } = router;
 
   const { route, prevRoute, nextRoute } = getRouteContext(_route, routes);
-  const title = route && `${page.title || route.title} | Formik`;
+  const title = route && `${page.title || route.title} | TS-Collection`;
   const { tag } = getSlug(query as { slug: string[] });
 
   // This effect adds `next/link`-like behavior to any non-hash relative link
@@ -138,62 +136,6 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
       `}</style>
     </>
   );
-}
-
-function getCategoryPath(routes: RouteItem[]) {
-  const route = routes.find((r) => r.path);
-  return route && removeFromLast(route.path!, '/');
-}
-
-function SidebarRoutes({
-  isMobile,
-  routes: currentRoutes,
-
-  level = 1,
-}: {
-  isMobile?: boolean;
-  routes: RouteItem[];
-
-  level?: number;
-}) {
-  const { query } = useRouter();
-  const { tag, slug } = getSlug(query as any);
-
-  return (currentRoutes as RouteItem[]).map(({ path, title, routes, heading, open }, idx) => {
-    if (routes) {
-      const pathname = getCategoryPath(routes);
-      const selected = slug.startsWith(pathname as any);
-      const opened = selected || isMobile ? false : open;
-
-      if (heading) {
-        return (
-          <SidebarHeading key={`${pathname}-heading-${idx}`} title={title}>
-            <SidebarRoutes isMobile={isMobile} routes={routes} level={level + 1} />
-          </SidebarHeading>
-        );
-      }
-
-      return (
-        <SidebarCategory
-          key={`${pathname}-category-${idx}`}
-          isMobile={isMobile}
-          level={level}
-          title={title}
-          selected={selected}
-          opened={opened}
-        >
-          <SidebarRoutes isMobile={isMobile} routes={routes} level={level + 1} />
-        </SidebarCategory>
-      );
-    }
-
-    const href = '/docs/[...slug]';
-    const pagePath = removeFromLast(path!, '.');
-    const pathname = addTagToSlug(pagePath, tag);
-    const selected = slug.startsWith(pagePath);
-    const route = { href, path, title, pathname, selected };
-    return <SidebarPost key={title} isMobile={isMobile} level={level} route={route} />;
-  }) as any;
 }
 
 export const getStaticProps: GetStaticProps<any, { slug: string[] }> = async ({ params }) => {
