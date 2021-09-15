@@ -14,7 +14,7 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.10.1",
     "@docsearch/css": "1.0.0-alpha.28",
-    "@docsearch/react": "1.0.0-alpha.27",
+    "@docsearch/react": "1.0.0-alpha.28",
     "@mdx-js/loader": "^1.5.1",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
