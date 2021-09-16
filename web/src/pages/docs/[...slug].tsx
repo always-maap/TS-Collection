@@ -1,8 +1,8 @@
-import { DocsPageFooter } from 'components/DocsPageFooter';
+import DocsPageFooter from 'components/DocsPageFooter';
 import MDXComponents from 'components/MDXComponents';
-import { Seo } from 'components/Seo';
+import Seo from 'components/Seo';
 import Sticky from 'components/Sticky';
-import { Toc } from 'components/Toc';
+import Toc from 'components/Toc';
 import addRouterEvents from 'components/addRouterEvents';
 import s from 'components/markdown.module.css';
 import Sidebar from 'components/side-bar/Sidebar';
@@ -42,7 +42,7 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
   const { asPath, isFallback, query } = router;
 
   const { route, prevRoute, nextRoute } = getRouteContext(_route, routes);
-  const title = route && `${page.title || route.title} | TS-Collection`;
+  const title = route && `${page.title || route.title}`;
   const { tag } = getSlug(query as { slug: string[] });
 
   // This effect adds `next/link`-like behavior to any non-hash relative link
@@ -144,10 +144,8 @@ export const getStaticProps: GetStaticProps<any, { slug: string[] }> = async ({ 
 
   let manifest;
   if (tag) {
-    // console.log('remote');
     manifest = await fetchRemoteDocsManifest(tag);
   } else {
-    // console.log('local');
     manifest = await fetchLocalDocsManifest();
   }
 

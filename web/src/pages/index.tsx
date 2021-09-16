@@ -1,4 +1,4 @@
-import { Seo } from 'components/Seo';
+import Seo from 'components/Seo';
 import { REPO_URL } from 'constants/link';
 import Image from 'next/image';
 import Link from 'next/link';

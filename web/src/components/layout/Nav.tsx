@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { REPO_URL, TWITTER_URL } from '../../constants/link';
-import { ExternalLink } from '../ExternalLink';
-import Logo from '../Logo';
+import ExternalLink from '../ExternalLink';
+import Logo from './Logo';
 
 export const Nav: FC = () => (
   <div className="bg-white border-b border-gray-200">

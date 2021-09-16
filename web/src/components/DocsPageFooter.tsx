@@ -1,22 +1,23 @@
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import * as React from 'react';
+import { FC, memo } from 'react';
 import { EDIT_URL } from '../constants/link';
 import { addTagToSlug, getSlug, removeFromLast } from '../lib/docs/utils';
 import { RouteItem } from '../lib/types';
 
-export interface DocsPageFooterProps {
+type Props = {
   route: RouteItem;
   href: string;
   prevRoute?: RouteItem;
   nextRoute?: RouteItem;
-}
+};
 
-function areEqual(prevProps: DocsPageFooterProps, props: DocsPageFooterProps) {
+function areEqual(prevProps: Props, props: Props) {
   return prevProps.route?.path === props.route?.path;
 }
 
-export const DocsPageFooter = React.memo<DocsPageFooterProps>(({ route, href, prevRoute, nextRoute }) => {
+export const DocsPageFooter: FC<Props> = (props) => {
+  const { route, href, prevRoute, nextRoute } = props;
   const { query } = useRouter();
   const { tag, slug } = getSlug(query as { slug: string[] });
   const editUrl = `${EDIT_URL}${route?.path}`;
@@ -62,6 +63,6 @@ export const DocsPageFooter = React.memo<DocsPageFooterProps>(({ route, href, pr
       </div>
     </>
   );
-}, areEqual);
+};
 
-DocsPageFooter.displayName = 'DocsPageFooter';
+export default memo(DocsPageFooter, areEqual);

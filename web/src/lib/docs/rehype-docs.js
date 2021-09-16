@@ -45,7 +45,6 @@ function visitCard(node) {
 }
 
 export default function rehypeDocs({ filePath, tag }) {
-  const slugger = new GithubSlugger();
   const anchorSlugger = new GithubSlugger();
   // Don't use the custom tag here, relative URLs to repo files should always go to canary
   const blobUrl = `${GITHUB_URL}/${REPO_NAME}/blob/master`;

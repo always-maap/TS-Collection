@@ -1,6 +1,6 @@
 import { FC } from 'react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import Sticky from '../Sticky';
-import { useIsMobile } from '../useIsMobile';
 import Footer from './Footer';
 import Nav from './Nav';
 

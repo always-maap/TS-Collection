@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { COMMUNITIES, RESOURCES } from '../../constants/link';
 import { COPYRIGHT } from '../../constants/text';
-import { ExternalLink } from '../ExternalLink';
+import ExternalLink from '../ExternalLink';
 
 const Footer: FC = () => {
   return (
