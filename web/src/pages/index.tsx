@@ -1,9 +1,9 @@
-import Seo from 'components/Seo';
+import Seo from 'components/shared/Seo';
 import { REPO_URL } from 'constants/link';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import CheckIcon from '../components/CheckIcon';
+import CheckIcon from '../components/icons/CheckIcon';
 import { FEATURES, KEY_FEATURES } from '../constants/text';
 
 const Home: FC = () => {

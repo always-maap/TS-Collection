@@ -1,10 +1,10 @@
-import DocsPageFooter from 'components/DocsPageFooter';
-import MDXComponents from 'components/MDXComponents';
-import Seo from 'components/Seo';
-import Sticky from 'components/Sticky';
-import Toc from 'components/Toc';
 import addRouterEvents from 'components/addRouterEvents';
-import s from 'components/markdown.module.css';
+import DocsPageFooter from 'components/docs/DocsPageFooter';
+import MDXComponents from 'components/docs/MDXComponents';
+import Toc from 'components/docs/Toc';
+import markdownStyles from 'components/docs/markdown.module.css';
+import Seo from 'components/shared/Seo';
+import Sticky from 'components/shared/Sticky';
 import Sidebar from 'components/side-bar/Sidebar';
 import SidebarMobile from 'components/side-bar/SidebarMobile';
 import SidebarRoutes from 'components/side-bar/SidebarRoutes';
@@ -29,15 +29,16 @@ import { serialize } from 'next-mdx-remote/serialize';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 
-interface DocsProps {
+type Props = {
   page: Page;
   routes: RouteItem[];
   route: RouteItem;
-}
+};
 
-export default function Docs({ page, routes, route: _route }: DocsProps) {
+const Docs: FC<Props> = (props) => {
+  const { page, routes, route: _route } = props;
   const router = useRouter();
   const { asPath, isFallback, query } = router;
 
@@ -97,9 +98,9 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
                       <SidebarRoutes routes={routes} />
                     </Sidebar>
 
-                    <div className={s['markdown'] + ' w-full docs'}>
+                    <div className={markdownStyles['markdown'] + ' w-full docs'}>
                       <h1>{page.title}</h1>
-                      <div className={s['markdown']}>
+                      <div className={markdownStyles['markdown']}>
                         {' '}
                         <MDXRemote {...page.mdxSource} components={MDXComponents} />
                       </div>
@@ -136,7 +137,9 @@ export default function Docs({ page, routes, route: _route }: DocsProps) {
       `}</style>
     </>
   );
-}
+};
+
+export default Docs;
 
 export const getStaticProps: GetStaticProps<any, { slug: string[] }> = async ({ params }) => {
   const { tag, slug } = getSlug(params ?? { slug: [] });

@@ -170,7 +170,4 @@
   @apply mb-0;
 }
 
-.markdown pre {
-  @apply p-4 rounded-lg text-sm;
-}
 /* purgecss end ignore */

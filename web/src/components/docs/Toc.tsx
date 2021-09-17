@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import { FC } from 'react';
-import { useTocHighlight } from '../hooks/useTocHighlight';
+import { useTocHighlight } from '../../hooks/useTocHighlight';
 import styles from './Toc.module.css';
 
 const TOP_OFFSET = 100;

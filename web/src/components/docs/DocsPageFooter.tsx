@@ -1,9 +1,9 @@
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, memo } from 'react';
-import { EDIT_URL } from '../constants/link';
-import { addTagToSlug, getSlug, removeFromLast } from '../lib/docs/utils';
-import { RouteItem } from '../lib/types';
+import { EDIT_URL } from '../../constants/link';
+import { addTagToSlug, getSlug, removeFromLast } from '../../lib/docs/utils';
+import { RouteItem } from '../../lib/types';
 
 type Props = {
   route: RouteItem;

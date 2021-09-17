@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { REPO_URL, TWITTER_URL } from '../../constants/link';
-import ExternalLink from '../ExternalLink';
+import ExternalLink from '../shared/ExternalLink';
 import Logo from './Logo';
 
 export const Nav: FC = () => (

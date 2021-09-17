@@ -1,6 +1,6 @@
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import cn from 'classnames';
-import Container from 'components/Container';
+import Container from 'components/shared/Container';
 import { useRouter } from 'next/router';
 import { FC, useEffect, useRef, useState } from 'react';
 import { FiChevronRight as ArrowRightSidebar } from 'react-icons/fi';
