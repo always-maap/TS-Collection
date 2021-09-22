@@ -4,15 +4,47 @@ title: Overview
 description: TS-Collection documentation, tutorial, guides, and examples
 ---
 
-description
+Performance is essential to deliver high-quality software.
+With the recent evolutions of the web, Performance shows its importance even more.
+There were a lot of tries to make the web faster, like worker-threads or WASM but still, those are just tools rather than definitive answer.
+
+Algorithms and Data-Structures are the keys to achieve more reliable and performant applications.
+"TS-Collection" is a library to help you learn, visualize, and use Algorithm and Data-Structure in your projects.
 
 ## Motivation
 
-motivation
+Algorithm and Data-Structures are always been fascinating to me.
+We never can deny the use cases and importance of these subjects.
+I truly believe in OSS and wanted to help people learn and use these algorithms.
+This library is not perfect since I'm not the best one to write it. I'm learning a lot in this journey too but
+I'm trying my best to offer these features with this library.
+
+- **fast.**
+  Trying to port the fastest implementation out there.
+- **tested.**
+  100% coverage for all the files.
+- **documented.**
+  Documentation for how to write and use these Algorithms and Data-Structures.
+  Also API references for this library specifically.
+- **vast variety.** Implement the well-known and useful ones.
 
 ## Influences
 
-Influences
+I can list so many OSS lovers. Here is a few. These guys are wonderful. Thank you <3
+
+[Kent C. Dodds](https://github.com/kentcdodds),
+[Tanner Linsley](https://github.com/tannerlinsley),
+[Jared Palmer](https://github.com/jaredpalmer),
+[Jake Archibald](https://github.com/jakearchibald),
+[Surma](https://github.com/surma),
+[Jason Miller](https://github.com/developit),
+[Joshua Comeau](https://github.com/joshwcomeau),
+[Paul Henschel](https://github.com/drcmda),
+[Daishi Kato](https://github.com/dai-shi),
+[Tim Neutkens](https://github.com/timneutkens),
+[Dan Abramov](https://github.com/gaearon),
+[Michael Jackson](https://github.com/mjackson),
+[Ryan Florence](https://github.com/ryanflorence),
 
 ## Installation
 
