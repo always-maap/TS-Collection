@@ -16,9 +16,9 @@ const Code: FC<Props> = (props) => {
 
   return (
     <Highlight {...defaultProps} code={children.trim()} language="typescript" theme={theme}>
-      {({ className, tokens, getLineProps, getTokenProps }) => (
+      {({ tokens, getLineProps, getTokenProps }) => (
         <div className="relative overflow-hidden rounded-2xl">
-          <pre className={cn(className, 'py-4 bg-gray-900 overflow-auto')}>
+          <pre className={cn('py-4 bg-gray-900 overflow-auto')}>
             {tokens.map((line, i) => (
               <div key={i} {...getLineProps({ line, key: i })}>
                 {tokens.length > 1 ? (

@@ -1,5 +1,4 @@
 import GithubSlugger from 'github-slugger';
-import toString from 'mdast-util-to-string';
 import visit from 'unist-util-visit';
 import { resolve } from 'url';
 import { GITHUB_URL, REPO_NAME } from '../github/constants';

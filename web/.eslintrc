@@ -1,6 +1,6 @@
 {
-  "extends": "../.eslintrc",
-  "rules": {
-    "@typescript-eslint/no-var-requires": 1
+  "extends": ["../.eslintrc", "next", "next/core-web-vitals"],
+  "parserOptions": {
+    "sourceType": "module"
   }
 }

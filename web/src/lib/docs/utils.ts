@@ -1,5 +1,3 @@
-import { NextRouter } from 'next/router';
-
 export function getSlug({ slug }: { slug: string[] }) {
   if (!slug) {
     return { slug: '/docs/overview.md' };

@@ -41,7 +41,13 @@ const Home: FC = () => {
 
           <div className="py-24 mx-auto container px-4 sm:mt-12 relative">
             <div className="hidden lg:block absolute lg:w-3/5 right-0 lg:translate-x-1/3 lg:-translate-y-16 md:w-1/2 sm:w-2/3 top-0 transform">
-              <Image src="/svg/white_flower.svg" width={1042} height={990} priority={true} />
+              <Image
+                src="/svg/white_flower.svg"
+                width={1042}
+                height={990}
+                priority={true}
+                alt="white flower logo"
+              />
             </div>
             <div className="grid grid-cols-12 gap-8">
               <div className="col-span-12 lg:col-span-6 ">
@@ -86,7 +92,7 @@ const Home: FC = () => {
             <div className="mx-auto container">
               <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                 {KEY_FEATURES.map((key_feature) => (
-                  <div className="mt-10 lg:mt-0">
+                  <div className="mt-10 lg:mt-0" key={key_feature.title}>
                     <div key={key_feature.title}>
                       <h3 className="text-xl leading-6 xl:text-2xl font-bold text-gray-900">
                         {key_feature.title}

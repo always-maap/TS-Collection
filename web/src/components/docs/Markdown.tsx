@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { FC } from 'react';
 import markdownStyles from './markdown.module.css';
 
-export interface Markdown {
+type Props = {
   html: string;
-}
+};
 
-export const Markdown: React.FC<Markdown> = ({ html: content }) => {
+export const Markdown: FC<Props> = ({ html: content }) => {
   return <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: content }} />;
 };
 

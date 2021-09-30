@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build && npm run sitemap",
+    "lint": "next lint",
     "start": "next start",
     "rss": "node ./.next/server/scripts/build-rss.js",
     "sitemap": "node ./scripts/build-sitemap.js"
@@ -68,6 +69,7 @@
     "use-onclickoutside": "^0.3.1"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^11.1.2",
     "@svgr/webpack": "5.5.0",
     "@tailwindcss/ui": "0.3.1",
     "@types/body-scroll-lock": "3.1.0",
@@ -78,6 +80,7 @@
     "@types/react-dom": "17.0.9",
     "@types/react-highlight": "0.12.3",
     "algoliasearch": "3.35.1",
+    "eslint-config-next": "^11.1.2",
     "github-slugger": "1.4.0",
     "md5": "2.3.0",
     "mdast-util-to-string": "1.1.0",
