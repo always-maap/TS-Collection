@@ -32,7 +32,7 @@
     "docsearch.js": "^2.6.3",
     "framer-motion": "^4.0.0",
     "gray-matter": "^4.0.2",
-    "hast-util-sanitize": "^3.0.2",
+    "hast-util-sanitize": "^4.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "intersection-observer": "^0.10.0",
