@@ -18,5 +18,3 @@ export { quickSort } from './QuickSort';
 export { radixSort } from './RadixSort';
 export { selectionSort } from './SelectionSort';
 export { shellSort } from './ShellSort';
-
-console.log('yo');
