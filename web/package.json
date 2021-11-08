@@ -79,7 +79,7 @@
     "@types/react": "17.0.19",
     "@types/react-dom": "17.0.10",
     "@types/react-highlight": "0.12.5",
-    "algoliasearch": "4.10.5",
+    "algoliasearch": "4.11.0",
     "eslint-config-next": "11.1.2",
     "github-slugger": "1.4.0",
     "md5": "2.3.0",
