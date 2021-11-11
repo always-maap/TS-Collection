@@ -77,38 +77,6 @@ h6:hover .anchor::after {
   visibility: visible;
 }
 
-/* Algolia v3 overrides */
-:root {
-  --docsearch-highlight-color: #1965e0;
-  --docsearch-primary-color: #0052cc;
-  --docsearch-searchbox-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
-  --ifm-z-index-fixed: 1000;
-  --docsearch-searchbox-height: 48px;
-  --docsearch-icon-stroke-width: 1.4;
-  --hover-overlay: rgba(0, 0, 0, 0.05);
-  --fds-animation-fade-in: cubic-bezier(0, 0, 1, 1);
-  --fds-animation-fade-out: cubic-bezier(0, 0, 1, 1);
-}
-
-.DocSearch--active #__next {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-}
-.DocSearch-SearchBar {
-  @apply mb-2;
-}
-
-.DocSearch-Form {
-  @apply rounded-md;
-}
-
-.DocSearch-Search-Icon {
-  height: 20px;
-  width: 20px;
-  stroke-width: 1.6;
-  @apply text-gray-600;
-}
-
 /* Custom Remark alerts */
 .alert {
   @apply p-4 border-l-4  mb-4;

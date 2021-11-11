@@ -14,8 +14,6 @@
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.10.1",
-    "@docsearch/css": "1.0.0-alpha.28",
-    "@docsearch/react": "1.0.0-alpha.28",
     "@mdx-js/loader": "^1.5.1",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
@@ -29,7 +27,6 @@
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.3.1",
     "date-fns": "^2.12.0",
-    "docsearch.js": "^2.6.3",
     "framer-motion": "^5.0.0",
     "gray-matter": "^4.0.2",
     "hast-util-sanitize": "^4.0.0",
