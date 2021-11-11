@@ -173,7 +173,7 @@ export const getStaticProps: GetStaticProps<any, { slug: string[] }> = async ({ 
 
   const mdxSource = await serialize(content ?? '', {
     mdxOptions: {
-      remarkPlugins,
+      remarkPlugins: remarkPlugins as any,
       rehypePlugins: [[rehypeDocs as any, { filePath: route.path!, tag }]],
     },
   });
