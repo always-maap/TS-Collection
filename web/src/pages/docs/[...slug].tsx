@@ -17,7 +17,6 @@ import {
   getPaths,
   getRawFileFromLocal,
 } from 'lib/docs/page';
-import rehypeDocs from 'lib/docs/rehype-docs';
 import remarkPlugins from 'lib/docs/remark-plugins';
 import { getSlug } from 'lib/docs/utils';
 import { getRouteContext } from 'lib/get-route-context';
@@ -172,11 +171,9 @@ export const getStaticProps: GetStaticProps<any, { slug: string[] }> = async ({ 
   const { content, data } = matter(md);
 
   const mdxSource = await serialize(content ?? '', {
-    mdxOptions: {
-      remarkPlugins: remarkPlugins as any,
-      rehypePlugins: [[rehypeDocs as any, { filePath: route.path!, tag }]],
-    },
+    mdxOptions: { remarkPlugins: remarkPlugins as any },
   });
+
   return {
     props: {
       route,
