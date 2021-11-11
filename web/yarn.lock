@@ -2592,10 +2592,10 @@
   resolved "https://registry.yarnpkg.com/@types/mdurl/-/mdurl-1.0.2.tgz#e2ce9d83a613bacf284c7be7d491945e39e1f8e9"
   integrity sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==
 
-"@types/mdx-js__react@1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@types/mdx-js__react/-/mdx-js__react-1.5.4.tgz#75ed343b5a1f56d9518e902d956e1b611da4a297"
-  integrity sha512-hce+Hymj3cEMOma13eQRhpT3mhQrOkN4CAYEwKWB/qj2BiuUrrTpCkOShEERGmLVgDc3nxF4Dc0k7W999EQxnQ==
+"@types/mdx-js__react@1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@types/mdx-js__react/-/mdx-js__react-1.5.5.tgz#fa6daa1a28336d77b6cf071aacc7e497600de9ee"
+  integrity sha512-k8pnaP6JXVlQh18HgL5X6sYFNC/qZnzO7R2+HsmwrwUd+JnnsU0d9lyyT0RQrHg1anxDU36S98TI/fsGtmYqqg==
   dependencies:
     "@types/react" "*"
 
@@ -5508,13 +5508,6 @@ hast-util-raw@^7.2.0:
     vfile "^5.0.0"
     web-namespaces "^2.0.0"
     zwitch "^2.0.0"
-
-hast-util-sanitize@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/hast-util-sanitize/-/hast-util-sanitize-3.0.2.tgz#b0b783220af528ba8fe6999f092d138908678520"
-  integrity sha512-+2I0x2ZCAyiZOO/sb4yNLFmdwPBnyJ4PBkVTUMKMqBwYNA+lXSgOmoRXlJFazoyid9QPogRRKgKhVEodv181sA==
-  dependencies:
-    xtend "^4.0.0"
 
 hast-util-sanitize@^4.0.0:
   version "4.0.0"
