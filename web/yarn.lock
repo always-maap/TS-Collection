@@ -3094,7 +3094,7 @@ autocomplete.js@0.36.0:
   dependencies:
     immediate "^3.2.3"
 
-autoprefixer@^10.4.0:
+autoprefixer@10.4.0:
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.0.tgz#c3577eb32a1079a440ec253e404eaf1eb21388c8"
   integrity sha512-7FdJ1ONtwzV1G43GDD0kpVMn/qbiNqyOPMFTX5nRffI+7vgWoFEc6DcXOxHJxrWNDXrZh18eDsZjvZGUljSRGA==
@@ -8218,6 +8218,15 @@ postcss@8.2.15:
     nanoid "^3.1.23"
     source-map "^0.6.1"
 
+postcss@8.3.11, postcss@^8.1.6, postcss@^8.2.1:
+  version "8.3.11"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.11.tgz#c3beca7ea811cd5e1c4a3ec6d2e7599ef1f8f858"
+  integrity sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA==
+  dependencies:
+    nanoid "^3.1.30"
+    picocolors "^1.0.0"
+    source-map-js "^0.6.2"
+
 postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.36"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
@@ -8226,15 +8235,6 @@ postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
-
-postcss@^8.1.6, postcss@^8.2.1, postcss@^8.3.11:
-  version "8.3.11"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.11.tgz#c3beca7ea811cd5e1c4a3ec6d2e7599ef1f8f858"
-  integrity sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA==
-  dependencies:
-    nanoid "^3.1.30"
-    picocolors "^1.0.0"
-    source-map-js "^0.6.2"
 
 prepend-http@^1.0.1:
   version "1.0.4"
@@ -9631,7 +9631,7 @@ svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-tailwindcss@^2.2.19:
+tailwindcss@2.2.19:
   version "2.2.19"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.2.19.tgz#540e464832cd462bb9649c1484b0a38315c2653c"
   integrity sha512-6Ui7JSVtXadtTUo2NtkBBacobzWiQYVjYW0ZnKaP9S1ZCKQ0w7KVNz+YSDI/j7O7KCMHbOkz94ZMQhbT9pOqjw==
