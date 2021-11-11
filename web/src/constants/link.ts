@@ -1,5 +1,5 @@
-export const EDIT_URL = '';
 export const REPO_URL = 'https://github.com/always-maap/TS-Collection';
+export const EDIT_URL = `${REPO_URL}/edit/master`;
 export const REPO_DISCUSSIONS = `${REPO_URL}/discussions`;
 export const REPO_RELEASES = `${REPO_URL}/releases`;
 
