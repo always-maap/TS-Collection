@@ -1,22 +1,26 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ * Links
+ * -------------------------------------------------------------------------------------------------------------------*/
 export const REPO_URL = 'https://github.com/always-maap/TS-Collection';
 export const EDIT_URL = `${REPO_URL}/edit/master`;
-export const REPO_DISCUSSIONS = `${REPO_URL}/discussions`;
-export const REPO_RELEASES = `${REPO_URL}/releases`;
 
 export const TWITTER_URL = 'https://twitter.com/itsTuR1NG';
 
+/* ---------------------------------------------------------------------------------------------------------------------
+ * Footer Items
+ * -------------------------------------------------------------------------------------------------------------------*/
 export const RESOURCES = [
   { name: 'Docs', link: '/docs/overview' },
-  { name: 'Algorithms', link: '/docs/overview' },
-  { name: 'Data-Structures', link: '/docs/overview' },
-  { name: 'API Reference', link: '/docs/overview' },
-  { name: 'Examples', link: '/docs/overview' },
+  { name: 'Algorithms', link: '/docs/algorithm/binarySearch' },
+  { name: 'Data-Structures', link: '/docs/data-structures/BinarySearchTree' },
+  { name: 'API Reference', link: '/docs/api/binarySearch' },
+  { name: 'Examples', link: '/docs/examples/search' },
 ];
 
 export const COMMUNITIES = [
-  { name: 'Contribution', link: '/docs/overview' },
-  { name: 'Pull Requests', link: '/docs/overview' },
-  { name: 'Issues', link: '/docs/overview' },
-  { name: 'Discussions', link: REPO_DISCUSSIONS },
-  { name: 'Releases', link: REPO_RELEASES },
+  { name: 'Contribution', link: `${REPO_URL}/blob/master/README.md` },
+  { name: 'Pull Requests', link: `${REPO_URL}/pulls` },
+  { name: 'Issues', link: `${REPO_URL}/issues` },
+  { name: 'Discussions', link: `${REPO_URL}/discussions` },
+  { name: 'Releases', link: `${REPO_URL}/releases` },
 ];

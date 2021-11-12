@@ -36,9 +36,9 @@ const Footer: FC = () => {
                       href={community.link}
                       className="text-base leading-6 text-gray-500 hover:text-gray-900"
                     >
-                      <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                      <span className="text-base leading-6 text-gray-500 hover:text-gray-900">
                         {community.name}
-                      </a>
+                      </span>
                     </ExternalLink>
                   </li>
                 ))}
