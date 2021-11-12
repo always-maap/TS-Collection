@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import VisuallyHidden from 'components/shared/VisuallyHidden';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/okaidia';
 import { FC } from 'react';
@@ -38,6 +39,7 @@ const Code: FC<Props> = (props) => {
             ))}
             <button className="p-2 absolute" onClick={copy} style={{ top: 10, right: 10 }}>
               {hasCopy ? <FiCheck /> : <FiCopy />}
+              <VisuallyHidden>{hasCopy ? 'copied' : 'copy'}</VisuallyHidden>
             </button>
           </pre>
         </div>
