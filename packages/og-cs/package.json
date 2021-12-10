@@ -1,0 +1,24 @@
+{
+  "name": "og-cs",
+  "version": "0.0.1",
+  "description": "classic computer science problems in typescript",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "nodemon src/index.ts",
+    "lint": "eslint src"
+  },
+  "repository": "git+https://github.com/always-maap/TS-Collection.git",
+  "keywords": [
+    "typescript",
+    "algorithm",
+    "data structure",
+    "collections-typescript"
+  ],
+  "author": "tur1ng <mohammadali.ap.2000@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/always-maap/TS-Collection/issues"
+  },
+  "homepage": "https://github.com/always-maap/TS-Collection#readme",
+  "devDependencies": {}
+}
