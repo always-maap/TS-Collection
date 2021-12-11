@@ -2,7 +2,7 @@ export const knapsackRecursive = (
   profits: Array<number>,
   weights: Array<number>,
   capacity: number,
-  currentIndex: number
+  currentIndex = profits.length
 ): number => {
   if (capacity === 0 || currentIndex === 0) return 0;
 
