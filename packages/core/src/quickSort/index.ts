@@ -1,0 +1,1 @@
+export { quickSort } from './quickSort';

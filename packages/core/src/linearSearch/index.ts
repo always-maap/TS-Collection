@@ -1,0 +1,1 @@
+export { linearSearch } from './linearSearch';

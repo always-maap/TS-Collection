@@ -1,0 +1,1 @@
+export { binarySearch } from './binarySearch';

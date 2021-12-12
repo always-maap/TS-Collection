@@ -1,4 +1,4 @@
-import { shellSort } from '../src';
+import { shellSort } from './shellSort';
 
 describe('Basic functionality', () => {
   it('sort number array', () => {

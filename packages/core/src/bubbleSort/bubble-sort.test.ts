@@ -1,4 +1,4 @@
-import { bubbleSort } from '../src';
+import { bubbleSort } from './bubbleSort';
 
 describe('Basic functionality', () => {
   it('sort the unsorted arr', () => {
