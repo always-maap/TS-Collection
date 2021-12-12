@@ -1,1 +1,1 @@
-export { BinarySearchTree } from './BinarySearchTree';
+export { BinarySearchTree, IBSTNode } from './BinarySearchTree';

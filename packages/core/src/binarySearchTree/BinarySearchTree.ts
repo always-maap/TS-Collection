@@ -1,10 +1,14 @@
-export interface BSTNode<T> {
+export interface IBSTNode<T> {
   value: T;
   left: BSTNode<T> | null;
   right: BSTNode<T> | null;
 }
 
-export class BSTNode<T> implements BSTNode<T> {
+export class BSTNode<T> implements IBSTNode<T> {
+  value: IBSTNode<T>['value'];
+  left: IBSTNode<T>['left'];
+  right: IBSTNode<T>['right'];
+
   constructor(value: T) {
     this.value = value;
     this.left = null;
@@ -12,13 +16,15 @@ export class BSTNode<T> implements BSTNode<T> {
   }
 }
 
-export interface BinarySearchTree<T> {
+export interface IBinarySearchTree<T> {
   root: BSTNode<T> | null;
   insert(value: T): any;
-  find(value: T): BSTNode<T> | undefined;
+  find(value: T): BSTNode<T> | null;
 }
 
-export class BinarySearchTree<T> implements BinarySearchTree<T> {
+export class BinarySearchTree<T> implements IBinarySearchTree<T> {
+  root: IBinarySearchTree<T>['root'];
+
   constructor() {
     this.root = null;
   }
@@ -52,7 +58,7 @@ export class BinarySearchTree<T> implements BinarySearchTree<T> {
 
   find(value: T) {
     if (this.root === null) {
-      return false;
+      return null;
     }
     let current: BSTNode<T> | null = this.root,
       found = false;
@@ -65,7 +71,7 @@ export class BinarySearchTree<T> implements BinarySearchTree<T> {
         found = true;
       }
     }
-    if (!found) return undefined;
+    if (!found) return null;
     return current;
   }
 }

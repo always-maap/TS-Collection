@@ -1,5 +1,5 @@
-import { BinarySearchTree, BSTNode } from './BinarySearchTree';
-import { Queue } from './Queue';
+import { BinarySearchTree, IBSTNode } from '../binarySearchTree';
+import { Queue } from '../queue';
 
 export interface IBreadthFirstSearch<T> {
   traverse(): Array<T>;
@@ -7,9 +7,9 @@ export interface IBreadthFirstSearch<T> {
 
 export class BreadthFirstSearch<T> extends BinarySearchTree<T> implements IBreadthFirstSearch<T> {
   traverse() {
-    let node: BSTNode<T> | null = this.root;
+    let node: IBSTNode<T> | null = this.root;
     const data: Array<T> = [],
-      queue = new Queue<BSTNode<T> | null>();
+      queue = new Queue<IBSTNode<T> | null>();
     queue.enqueue(node);
     while (queue.size) {
       node = queue.dequeue()!;

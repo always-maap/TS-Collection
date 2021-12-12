@@ -1,4 +1,4 @@
-import { BinarySearchTree, BSTNode } from './BinarySearchTree';
+import { BinarySearchTree, IBSTNode } from '../binarySearchTree';
 
 export interface IDepthFirstSearch<T> {
   preOrder(): Array<T>;
@@ -9,7 +9,7 @@ export interface IDepthFirstSearch<T> {
 export class DepthFirstSearch<T> extends BinarySearchTree<T> implements IDepthFirstSearch<T> {
   preOrder() {
     const data: Array<T> = [];
-    const traverse = (node: BSTNode<T> | null) => {
+    const traverse = (node: IBSTNode<T> | null) => {
       if (node === null) return;
       data.push(node.value);
       if (node.left) traverse(node.left);
@@ -21,7 +21,7 @@ export class DepthFirstSearch<T> extends BinarySearchTree<T> implements IDepthFi
 
   postOrder() {
     const data: Array<T> = [];
-    const traverse = (node: BSTNode<T> | null) => {
+    const traverse = (node: IBSTNode<T> | null) => {
       if (node === null) return;
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
@@ -33,7 +33,7 @@ export class DepthFirstSearch<T> extends BinarySearchTree<T> implements IDepthFi
 
   inOrder() {
     const data: Array<T> = [];
-    const traverse = (node: BSTNode<T> | null) => {
+    const traverse = (node: IBSTNode<T> | null) => {
       if (node === null) return;
       if (node.left) traverse(node.left);
       data.push(node.value);
