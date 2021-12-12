@@ -1,5 +1,5 @@
-import { Queue } from './Queue';
-import { Stack } from './Stacks';
+import { Queue } from '../queue';
+import { Stack } from '../stacks';
 
 type NodeType = string | number;
 
