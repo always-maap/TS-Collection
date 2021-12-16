@@ -13,7 +13,6 @@ export { bubbleSort } from './bubbleSort';
 export { insertionSort } from './insertionSort';
 export { linearSearch } from './linearSearch';
 export { mergeSort } from './mergeSort';
-export { naiveSearch } from './naiveSearch';
 export { quickSort } from './quickSort';
 export { radixSort } from './radixSort';
 export { selectionSort } from './selectionSort';

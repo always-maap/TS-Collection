@@ -1,1 +1,0 @@
-export { naiveSearch } from './naiveSearch';
