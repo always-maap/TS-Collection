@@ -66,7 +66,7 @@
     "use-onclickoutside": "^0.4.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "12.0.7",
+    "@next/eslint-plugin-next": "12.0.8",
     "@svgr/webpack": "6.1.2",
     "@tailwindcss/ui": "0.7.2",
     "@types/body-scroll-lock": "3.1.0",
@@ -78,7 +78,7 @@
     "@types/react-highlight": "0.12.5",
     "algoliasearch": "4.11.0",
     "autoprefixer": "10.4.1",
-    "eslint-config-next": "12.0.7",
+    "eslint-config-next": "12.0.8",
     "github-slugger": "1.4.0",
     "md5": "2.3.0",
     "mdast-util-to-string": "3.1.0",
