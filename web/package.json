@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "12.0.8",
-    "@svgr/webpack": "6.1.2",
+    "@svgr/webpack": "6.2.0",
     "@tailwindcss/ui": "0.7.2",
     "@types/body-scroll-lock": "3.1.0",
     "@types/mdx-js__react": "1.5.5",
