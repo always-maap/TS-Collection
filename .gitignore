@@ -5,6 +5,7 @@ node_modules
 /packages/*/node_modules
 .DS_Store
 /packages/*/dist
+.turbo
 
 /packages/*/coverage
 stats.html
