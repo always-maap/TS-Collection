@@ -9,7 +9,8 @@ jobs:
       - uses: Borales/actions-yarn@v2.3.0
         with:
           node-version: 16.x
-      - run: sudo yarn install --frozen-lockfile
+      - run: chown -R node:node /app/node_modules
+      - run: yarn install --frozen-lockfile
       - run: yarn test
       - run: yarn build
       - uses: codecov/codecov-action@v2
