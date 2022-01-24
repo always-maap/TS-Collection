@@ -6,10 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - uses: Borales/actions-yarn@v2.3.0
         with:
           node-version: 16.x
-      - run: chown -R node:node /app/node_modules
       - run: yarn install --frozen-lockfile
       - run: yarn test
       - run: yarn build
