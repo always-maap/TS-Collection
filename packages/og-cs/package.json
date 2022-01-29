@@ -20,5 +20,7 @@
     "url": "https://github.com/always-maap/TS-Collection/issues"
   },
   "homepage": "https://github.com/always-maap/TS-Collection#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "config": "*"
+  }
 }
