@@ -1,9 +1,13 @@
-const mergeArray = (arr1: Array<number>, arr2: Array<number>) => {
+import { Comparator, CompareFunction } from '@ts-collection/utils';
+
+const mergeArray = <T>(arr1: Array<T>, arr2: Array<T>, compareFunction?: CompareFunction<T>) => {
+  const comparator = new Comparator<T>(compareFunction);
+
   const mergedArray = [];
   let arr1Index = 0;
   let arr2Index = 0;
   while (arr1Index < arr1.length && arr2Index < arr2.length) {
-    if (arr2[arr2Index] > arr1[arr1Index]) {
+    if (comparator.greaterThan(arr2[arr2Index], arr1[arr1Index])) {
       mergedArray.push(arr1[arr1Index]);
       arr1Index++;
     } else {
@@ -26,10 +30,10 @@ const mergeArray = (arr1: Array<number>, arr2: Array<number>) => {
  * O(n log n) time
  * @param arr
  */
-export const mergeSort = (arr: Array<number>): Array<number> => {
+export const mergeSort = <T>(arr: Array<T>, compareFunction?: CompareFunction<T>): Array<T> => {
   if (arr.length <= 1) return arr;
   const mid = Math.floor(arr.length / 2);
-  const left = mergeSort(arr.slice(0, mid));
-  const right = mergeSort(arr.slice(mid));
+  const left = mergeSort<T>(arr.slice(0, mid), compareFunction);
+  const right = mergeSort<T>(arr.slice(mid), compareFunction);
   return mergeArray(left, right);
 };

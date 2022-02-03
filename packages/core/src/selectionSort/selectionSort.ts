@@ -1,12 +1,15 @@
+import { Comparator, CompareFunction } from '@ts-collection/utils';
+
 /**
  * O(n ^ 2) time
- * @param arr
  */
-export const selectionSort = (arr: Array<number>) => {
+export const selectionSort = <T>(arr: Array<T>, compareFunction?: CompareFunction<T>) => {
+  const comparator = new Comparator<T>(compareFunction);
+
   for (let i = 0; i < arr.length; i++) {
     let min = i;
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[min]) {
+      if (comparator.lessThan(arr[j], arr[min])) {
         min = j;
       }
     }
