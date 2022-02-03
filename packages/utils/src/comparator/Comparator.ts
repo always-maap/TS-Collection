@@ -1,7 +1,9 @@
-export class Comparator<T = string | number> {
-  compare: (a: T, b: T) => 0 | 1 | -1 = this.defaultCompareFunction;
+export type CompareFunction<T> = (a: T, b: T) => 0 | 1 | -1;
 
-  constructor(compareFunction?: (a: T, b: T) => 0 | 1 | -1) {
+export class Comparator<T = string | number> {
+  compare: CompareFunction<T> = this.defaultCompareFunction;
+
+  constructor(compareFunction?: CompareFunction<T>) {
     this.compare = compareFunction || this.defaultCompareFunction;
   }
 
