@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["esnext"],
+
     "strict": true,
     "strictPropertyInitialization": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "removeComments": true,

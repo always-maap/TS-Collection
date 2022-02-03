@@ -1,5 +1,12 @@
 {
   "extends": "config/tsconfig/base.json",
-  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true,
+
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules", "**.test"],
   "include": ["./src/**/*.ts"]
 }

@@ -1,1 +1,1 @@
-export { Comparator, CompareFunction } from './Comparator';
+export * from './Comparator';

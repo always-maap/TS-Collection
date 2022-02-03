@@ -4,7 +4,9 @@
   "scripts": {
     "clean": "turbo run clean",
     "dev": "turbo run dev --parallel --no-cache",
-    "build": "turbo run build",
+    "build:types": "yarn tsc -b",
+    "build:bundle": "rollup -c",
+    "build": "yarn build:bundle && yarn build:types",
     "lint": "turbo run lint",
     "test": "turbo run test"
   },
