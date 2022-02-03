@@ -1,11 +1,11 @@
-export class Comparator {
-  compare: any = Comparator.defaultCompareFunction;
+export class Comparator<T = string | number> {
+  compare: (a: T, b: T) => 0 | 1 | -1 = this.defaultCompareFunction;
 
-  constructor(compareFunction?: (a: any, b: any) => boolean) {
-    this.compare = compareFunction || Comparator.defaultCompareFunction;
+  constructor(compareFunction?: (a: T, b: T) => 0 | 1 | -1) {
+    this.compare = compareFunction || this.defaultCompareFunction;
   }
 
-  static defaultCompareFunction(a: string | number, b: string | number) {
+  defaultCompareFunction(a: T, b: T) {
     if (a === b) {
       return 0;
     }
@@ -13,23 +13,23 @@ export class Comparator {
     return a < b ? -1 : 1;
   }
 
-  equal(a: any, b: any) {
+  equal(a: T, b: T) {
     return this.compare(a, b) === 0;
   }
 
-  lessThan(a: any, b: any) {
+  lessThan(a: T, b: T) {
     return this.compare(a, b) < 0;
   }
 
-  greaterThan(a: any, b: any) {
+  greaterThan(a: T, b: T) {
     return this.compare(a, b) > 0;
   }
 
-  lessThanOrEqual(a: any, b: any) {
+  lessThanOrEqual(a: T, b: T) {
     return this.lessThan(a, b) || this.equal(a, b);
   }
 
-  greaterThanOrEqual(a: any, b: any) {
+  greaterThanOrEqual(a: T, b: T) {
     return this.greaterThan(a, b) || this.equal(a, b);
   }
 }
