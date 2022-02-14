@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Seo: FC<Props> = (props) => {
-  const { title, description, image = '/images/formik-og.png', children } = props;
+  const { title, description, image = '/images/og-image.png', children } = props;
   const router = useRouter();
 
   return (
@@ -24,25 +24,25 @@ const Seo: FC<Props> = (props) => {
 
       {/* OPEN GRAPH */}
       <meta property="og:type" key="og:type" content="website" />
-      <meta property="og:url" key="og:url" content={`https://formik.org${router.pathname}`} />
+      <meta property="og:url" key="og:url" content="ts-collection.vercel.app" />
       {title != undefined && <meta property="og:title" content={title} key="og:title" />}
       {description != undefined && (
         <meta property="og:description" key="og:description" content={description} />
       )}
       {image != undefined && (
-        <meta property="og:image" key="og:image" content={`https://formik.org${image}`} />
+        <meta property="og:image" key="og:image" content="ts-collection.vercel.app/images/og-image.png" />
       )}
 
       {/* TWITTER */}
       <meta name="twitter:card" key="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" key="twitter:site" content="@formikhq" />
-      <meta name="twitter:creator" key="twitter:creator" content="@formikhq" />
+      <meta name="twitter:site" key="twitter:site" content="@itsTuR1NG" />
+      <meta name="twitter:creator" key="twitter:creator" content="@itsTuR1NG" />
       {title != undefined && <meta name="twitter:title" key="twitter:title" content={title} />}
       {description != undefined && (
         <meta name="twitter:description" key="twitter:description" content={description} />
       )}
       {image != undefined && (
-        <meta name="twitter:image" key="twitter:image" content={`https://formik.org${image}`} />
+        <meta name="twitter:image" key="twitter:image" content={`ts-collection.vercel.app${image}`} />
       )}
 
       {children}
