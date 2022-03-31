@@ -50,7 +50,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/always-maap"><img src="https://avatars.githubusercontent.com/u/58308349?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad ali Ali panah</b></sub></a><br /><a href="https://github.com/always-maap/Collections-TypeScript/commits?author=always-maap" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/always-maap"><img src="https://avatars.githubusercontent.com/u/58308349?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohammad ali Ali panah</b></sub></a><br /><a href="https://github.com/always-maap/TS-Collection/commits?author=always-maap" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/alirezaopmc"><img src="https://avatars.githubusercontent.com/u/35873101?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alireza Jafartash</b></sub></a><br /><a href="https://github.com/always-maap/TS-Collection/commits?author=alirezaopmc" title="Tests">⚠️</a> <a href="https://github.com/always-maap/TS-Collection/commits?author=alirezaopmc" title="Code">💻</a></td>
   </tr>
 </table>
 
