@@ -19,6 +19,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "alirezaopmc",
+      "name": "Alireza Jafartash",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35873101?v=4",
+      "profile": "https://github.com/alirezaopmc",
+      "contributions": [
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 6,
