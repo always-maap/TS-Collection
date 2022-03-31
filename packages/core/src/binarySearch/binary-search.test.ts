@@ -15,7 +15,7 @@ describe('Basic functionality', () => {
     expect(binarySearch(arr, 3)).toEqual(2);
   });
 
-  it('search a repetitive in the array, it must return the first occurrence', () => {
+  it('search a repetitive element in the array, it must return the first occurrence', () => {
     const arr = [1, 1, 1, 1, 1];
     expect(binarySearch(arr, 1)).toEqual(0);
   });
