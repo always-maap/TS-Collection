@@ -71,7 +71,9 @@ export class BinarySearchTree<T> implements IBinarySearchTree<T> {
         found = true;
       }
     }
-    if (!found) return null;
+    if (!found) {
+      return null;
+    }
     return current;
   }
 }
