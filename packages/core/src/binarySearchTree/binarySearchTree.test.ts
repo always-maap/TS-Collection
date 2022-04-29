@@ -16,7 +16,7 @@ describe('Basic functionality', () => {
     expect(root?.left?.value).toBe(3);
     expect(root?.right?.value).toBe(10);
     expect(root?.left?.left?.value).toBe(1);
-    expect(root?.left?.left?.value).toBe(6);
+    expect(root?.left?.right?.value).toBe(6);
     expect(root?.right?.right?.value).toBe(14);
   });
 
