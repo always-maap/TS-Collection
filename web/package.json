@@ -61,7 +61,7 @@
     "remark-toc": "^8.0.0",
     "remark-unwrap-images": "^3.0.0",
     "scroll-into-view-if-needed": "^2.2.24",
-    "semver-regex": "^4.0.0",
+    "semver-regex": "^4.0.3",
     "unist-util-visit": "^4.0.0",
     "use-onclickoutside": "^0.4.0"
   },
