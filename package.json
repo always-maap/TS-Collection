@@ -14,7 +14,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@types/node": "16.11.20",
+    "@types/node": "16.11.43",
     "eslint": "8.7.0",
     "lerna": "4.0.0",
     "prettier": "2.5.1",
