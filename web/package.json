@@ -74,7 +74,7 @@
     "@types/node": "16.11.20",
     "@types/node-fetch": "3.0.2",
     "@types/react": "17.0.47",
-    "@types/react-dom": "17.0.11",
+    "@types/react-dom": "17.0.17",
     "@types/react-highlight": "0.12.5",
     "algoliasearch": "4.13.1",
     "autoprefixer": "10.4.2",
