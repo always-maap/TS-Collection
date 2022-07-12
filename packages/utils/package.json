@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/always-maap/TS-Collection#readme",
   "devDependencies": {
-    "@babel/core": "7.17.10",
-    "@babel/preset-env": "7.17.10",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/core": "7.18.6",
+    "@babel/preset-env": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-node-resolve": "13.1.3",
