@@ -1,15 +1,18 @@
 import { Queue } from './Queue';
 
 describe('Basic functionality', () => {
-  it('enqueue one item to queue should return 1', () => {
+  it('should enqueue', () => {
     const queue = new Queue<number>();
-    expect(queue.enqueue(1)).toBe(1);
-  });
+    queue.enqueue(8);
+    queue.enqueue(3);
+    queue.enqueue(10);
 
-  it('enqueue two item to queue should return 2', () => {
-    const queue = new Queue<number>();
-    queue.enqueue(1);
-    expect(queue.enqueue(5)).toBe(2);
+    console.log(queue);
+
+    expect(queue.size).toBe(3);
+    expect(queue.dequeue()).toBe(8);
+    expect(queue.dequeue()).toBe(3);
+    expect(queue.dequeue()).toBe(10);
   });
 
   it('enqueue and then dequeue should return that item', () => {

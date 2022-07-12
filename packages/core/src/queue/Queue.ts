@@ -38,12 +38,16 @@ export class Queue<T> implements Queue<T> {
   }
 
   dequeue(): T | undefined {
-    if (!this.first) return undefined;
+    if (!this.first) {
+      return undefined;
+    }
     const nodeToBeRemove = this.first;
-    if (this.first === this.last) {
+    if (this.first.next) {
+      this.first = this.first.next;
+    } else {
+      this.first = null;
       this.last = null;
     }
-    this.first = this.first.next;
     this.size--;
     return nodeToBeRemove.value!;
   }
