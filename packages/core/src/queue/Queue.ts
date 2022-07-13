@@ -1,54 +1,22 @@
-interface QueueNode<T> {
-  value: T | null;
-  next: QueueNode<T> | null;
-}
-
-class QueueNode<T> implements QueueNode<T> {
-  constructor(value: T) {
-    this.value = value;
-    this.next = null;
-  }
-}
-
-export interface Queue<T> {
-  first: QueueNode<T> | null;
-  last: QueueNode<T> | null;
-  size: number;
-  enqueue(val: T): number;
-  dequeue(): T | undefined;
-}
+import { LinkedList } from '../linkedList';
 
 export class Queue<T> implements Queue<T> {
-  constructor() {
-    this.first = null;
-    this.last = null;
-    this.size = 0;
+  constructor(public list: LinkedList<T> = new LinkedList<T>()) {}
+
+  enqueue(val: T) {
+    this.list.pushBack(val);
   }
 
-  enqueue(val: T): number {
-    const newNode = new QueueNode(val);
-    if (!this.first) {
-      this.first = newNode;
-      this.last = newNode;
-    } else {
-      this.last = newNode;
-      this.last.next = newNode;
-    }
-    return ++this.size;
+  dequeue() {
+    const removeHead = this.list.popBack();
+    return removeHead ? removeHead.value : null;
   }
 
-  dequeue(): T | undefined {
-    if (!this.first) {
-      return undefined;
-    }
-    const nodeToBeRemove = this.first;
-    if (this.first.next) {
-      this.first = this.first.next;
-    } else {
-      this.first = null;
-      this.last = null;
-    }
-    this.size--;
-    return nodeToBeRemove.value!;
+  size() {
+    return this.list.length;
+  }
+
+  toString(callback?: (val: T) => string) {
+    return this.list.toString(callback);
   }
 }

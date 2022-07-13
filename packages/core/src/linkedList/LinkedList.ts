@@ -1,38 +1,20 @@
-interface LinkedListNode<T> {
-  val: T | null;
-  next: LinkedListNode<T> | null;
-}
+import { Comparator, CompareFunction } from '@ts-collection/utils';
+import { LinkedListNode } from './ListListNode';
 
-class LinkedListNode<T> implements LinkedListNode<T> {
-  constructor(val: T) {
-    this.val = val;
-    this.next = null;
-  }
-}
-
-export interface SinglyLinkedList<T> {
+export class LinkedList<T> {
   head: LinkedListNode<T> | null;
   tail: LinkedListNode<T> | null;
+  compare: Comparator<T>;
   length: number;
-  push(val: T): LinkedListNode<T>;
-  pop(): LinkedListNode<T>;
-  shift(): LinkedListNode<T>;
-  unshift(val: T): LinkedListNode<T>;
-  get(index: number): LinkedListNode<T> | null;
-  set(index: number, val: T): boolean;
-  insert(index: number, val: T): boolean;
-  remove(index: number): LinkedListNode<T>;
-  reverse(): SinglyLinkedList<T>;
-}
 
-export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
-  constructor() {
+  constructor(compareFunction?: CompareFunction<T>) {
     this.head = null;
     this.tail = null;
+    this.compare = new Comparator<T>(compareFunction);
     this.length = 0;
   }
 
-  push(val: T) {
+  pushBack(val: T) {
     const newNode = new LinkedListNode(val);
     if (!this.head) {
       this.head = newNode;
@@ -45,8 +27,8 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
     return newNode;
   }
 
-  pop() {
-    if (!this.head) return undefined;
+  popBack() {
+    if (!this.head) return null;
     let current = this.head;
     let newTail = current;
     while (current.next) {
@@ -63,8 +45,8 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
     return current;
   }
 
-  shift() {
-    if (!this.head) return undefined;
+  popFront() {
+    if (!this.head) return null;
     const currentHead = this.head.next;
     this.head = this.head.next;
     this.length--;
@@ -74,7 +56,7 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
     return currentHead;
   }
 
-  unshift(val: T) {
+  pushFront(val: T) {
     const newNode = new LinkedListNode(val);
     if (!this.head) {
       this.head = newNode;
@@ -83,7 +65,6 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
       newNode.next = this.head;
       this.head = newNode;
     }
-    this.length++;
     return newNode;
   }
 
@@ -102,7 +83,7 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
   set(index: number, val: T) {
     const foundNode = this.get(index);
     if (foundNode) {
-      foundNode.val = val;
+      foundNode.value = val;
       return true;
     }
     return false;
@@ -111,8 +92,8 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
   insert(index: number, val: T) {
     const newNode = new LinkedListNode(val);
     if (index < 0 || index > this.length) return false;
-    if (index === 0) return !!this.unshift(val);
-    if (index === this.length) return !!this.push(val);
+    if (index === 0) return !!this.pushFront(val);
+    if (index === this.length) return !!this.pushBack(val);
     const previousNode = this.get(index - 1);
     const temp = previousNode!.next;
     previousNode!.next = newNode;
@@ -122,9 +103,15 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
   }
 
   remove(index: number) {
-    if (index < 0 || index > this.length) return false;
-    if (index === 0) return this.shift();
-    if (index === this.length) return this.pop();
+    if (index < 0 || index > this.length) {
+      return false;
+    }
+    if (index === 0) {
+      return this.popFront();
+    }
+    if (index === this.length) {
+      return this.popBack();
+    }
     const previousNode = this.get(index - 1);
     const removed = previousNode!.next;
     previousNode!.next = removed!.next;
@@ -145,5 +132,23 @@ export class SinglyLinkedList<T> implements SinglyLinkedList<T> {
       node = next;
     }
     return this;
+  }
+
+  toArray() {
+    const nodes = [];
+
+    let current = this.head;
+    while (current) {
+      nodes.push(current.value);
+      current = current.next;
+    }
+
+    return nodes;
+  }
+
+  toString(callback?: (val: T) => string) {
+    return this.toArray()
+      .map((node) => (callback ? callback(node) : node))
+      .join(', ');
   }
 }
