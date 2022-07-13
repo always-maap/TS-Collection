@@ -14,7 +14,7 @@ describe('Basic functionality', () => {
     queue.enqueue(10);
 
     expect(queue.list.length).toBe(3);
-    expect(queue.toString()).toBe('8, 3, 10');
+    expect(queue.toString()).toBe('8,3,10');
   });
 
   it('enqueue and then dequeue should return that item', () => {

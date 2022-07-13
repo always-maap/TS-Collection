@@ -165,6 +165,6 @@ export class LinkedList<T> {
   toString(callback?: (val: T) => string) {
     return this.toArray()
       .map((node) => (callback ? callback(node) : node))
-      .join(', ');
+      .join(',');
   }
 }

@@ -12,7 +12,7 @@ describe('Basic functionality', () => {
     stack.push(1);
     stack.push(2);
 
-    expect(stack.toString()).toBe('1, 2');
+    expect(stack.toString()).toBe('1,2');
   });
 
   it('should pop', () => {
