@@ -16,6 +16,7 @@ export class LinkedList<T> {
 
   pushBack(val: T) {
     const newNode = new LinkedListNode(val);
+
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
@@ -23,12 +24,15 @@ export class LinkedList<T> {
       this.tail!.next = newNode;
       this.tail = newNode;
     }
+
     this.length++;
     return newNode;
   }
 
   popBack() {
-    if (!this.head) return null;
+    if (!this.head) {
+      return null;
+    }
     let current = this.head;
     let newTail = current;
     while (current.next) {
@@ -45,27 +49,35 @@ export class LinkedList<T> {
     return current;
   }
 
-  popFront() {
-    if (!this.head) return null;
-    const currentHead = this.head.next;
-    this.head = this.head.next;
-    this.length--;
-    if (this.length === 0) {
-      this.tail = null;
+  pushFront(val: T) {
+    const newNode = new LinkedListNode(val, this.head);
+
+    this.head = newNode;
+
+    if (!this.tail) {
+      this.tail = newNode;
     }
-    return currentHead;
+
+    this.length++;
+    return newNode;
   }
 
-  pushFront(val: T) {
-    const newNode = new LinkedListNode(val);
+  popFront() {
     if (!this.head) {
-      this.head = newNode;
-      this.head = this.tail;
-    } else {
-      newNode.next = this.head;
-      this.head = newNode;
+      return null;
     }
-    return newNode;
+
+    const deletedNode = this.head.next;
+
+    if (this.head.next) {
+      this.head.next = null;
+    } else {
+      this.head = null;
+      this.tail = null;
+    }
+
+    this.length--;
+    return deletedNode;
   }
 
   get(index: number) {
@@ -132,6 +144,10 @@ export class LinkedList<T> {
       node = next;
     }
     return this;
+  }
+
+  size() {
+    return this.length;
   }
 
   toArray() {

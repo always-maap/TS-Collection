@@ -13,7 +13,7 @@ export class Queue<T> implements Queue<T> {
   }
 
   size() {
-    return this.list.length;
+    return this.list.size();
   }
 
   toString(callback?: (val: T) => string) {

@@ -26,7 +26,7 @@ describe('Basic functionality', () => {
 
 describe('falsy operations', () => {
   it('dequeue from empty queue should result undefined', () => {
-    const queue = new Queue<any>();
+    const queue = new Queue();
     expect(queue.dequeue()).toBe(null);
   });
 });
