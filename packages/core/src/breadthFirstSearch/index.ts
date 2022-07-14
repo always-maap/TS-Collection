@@ -1,1 +1,1 @@
-export { BreadthFirstSearch } from './BreadthFirstSearch';
+export { breadthFirstSearch } from './BreadthFirstSearch';
