@@ -1,1 +1,5 @@
-export { DepthFirstSearch } from './DepthFirstSearch';
+export {
+  depthFirstSearchInOrder,
+  depthFirstSearchPostOrder,
+  depthFirstSearchPreOrder,
+} from './DepthFirstSearch';
