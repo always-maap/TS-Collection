@@ -4,6 +4,7 @@ import 'nextra-theme-docs/style.css';
 import type { ReactElement, ReactNode } from 'react';
 
 export type NextPageWithLayout = NextPage & {
+  // eslint-disable-next-line no-unused-vars
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
