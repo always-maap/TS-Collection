@@ -1,6 +1,0 @@
-{
-  "extends": ["../.eslintrc", "next", "next/core-web-vitals"],
-  "parserOptions": {
-    "sourceType": "module"
-  }
-}
