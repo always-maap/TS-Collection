@@ -8,6 +8,6 @@ export default {
   },
 };
 
-const Template = () => <Array1D />;
+const Template = () => <Array1D initial={[1, 2, 3, 4]} actions={[]} />;
 
 export const LoggedOut = Template.bind({});
