@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Default",
     "target": "es5",
     "lib": ["esnext"],
-
     "strict": true,
     "strictPropertyInitialization": true,
     "noUnusedLocals": true,
