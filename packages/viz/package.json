@@ -1,0 +1,40 @@
+{
+  "name": "@ts-collection/viz",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "repository": "git+https://github.com/always-maap/TS-Collection.git",
+  "keywords": [
+    "typescript",
+    "algorithm",
+    "data structure",
+    "collections-typescript"
+  ],
+  "author": "tur1ng <mohammadali.ap.2000@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/always-maap/TS-Collection/issues"
+  },
+  "homepage": "https://github.com/always-maap/TS-Collection#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
+    "config": "*"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}

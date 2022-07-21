@@ -11,7 +11,8 @@
     "test": "turbo run test"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "devDependencies": {
     "@types/node": "16.11.43",
