@@ -19,7 +19,7 @@
     "lerna": "4.0.0",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
-    "ts-jest": "28.0.6",
+    "ts-jest": "28.0.7",
     "turbo": "1.2.6",
     "typescript": "4.5.4"
   },
