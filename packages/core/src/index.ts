@@ -13,6 +13,7 @@ export * from './bubbleSort';
 export * from './insertionSort';
 export * from './linearSearch';
 export * from './mergeSort';
+export * from './quickSelect';
 export * from './quickSort';
 export * from './radixSort';
 export * from './selectionSort';
