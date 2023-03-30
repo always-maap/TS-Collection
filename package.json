@@ -20,7 +20,7 @@
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "ts-jest": "28.0.7",
-    "turbo": "1.2.6",
+    "turbo": "1.8.8",
     "@babel/core": "7.17.10",
     "@babel/preset-env": "7.17.10",
     "@babel/preset-typescript": "7.16.7",
