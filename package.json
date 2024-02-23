@@ -15,7 +15,7 @@
     "apps/*"
   ],
   "devDependencies": {
-    "eslint": "8.7.0",
+    "eslint": "8.57.0",
     "lerna": "4.0.0",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
