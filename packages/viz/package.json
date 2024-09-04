@@ -11,7 +11,7 @@
     "collections-typescript"
   ],
   "resolutions": {
-    "webpack": "^5"
+    "webpack": "^5.94.0"
   },
   "author": "tur1ng <mohammadali.ap.2000@gmail.com>",
   "license": "ISC",
