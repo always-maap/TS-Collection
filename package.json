@@ -19,7 +19,7 @@
     "lerna": "4.0.0",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
-    "ts-jest": "28.0.7",
+    "ts-jest": "28.0.8",
     "turbo": "1.2.6",
     "@babel/core": "7.17.10",
     "@babel/preset-env": "7.17.10",
